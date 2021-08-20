@@ -1,3 +1,14 @@
 # Minimalist Neovim theme
 
-TODO README of {shaunsingh/nord.nvim}
+## TODO
+
+{shaunsingh/minimalist.nvim}
+- README
+- doc/
+- lua/lualine/ (if needed)
+
+My plugins
+- galaxyline
+- motions
+- nvim-tree
+- telescope
