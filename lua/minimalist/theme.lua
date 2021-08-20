@@ -5,68 +5,113 @@ local theme = {}
 theme.loadSyntax = function ()
     -- Syntax highlight groups
   local syntax = {
-    Type =           { fg = minimalist.nord9_gui }, -- int, long, char, etc.
-    StorageClass =   { fg = minimalist.nord9_gui }, -- static, register, volatile, etc.
-    Structure =      { fg = minimalist.nord9_gui }, -- struct, union, enum, etc.
-    Constant =       { fg = minimalist.nord4_gui }, -- any constant
-    Character =      { fg = minimalist.nord14_gui }, -- any character constant: 'c', '\n'
-    Number =         { fg = minimalist.nord15_gui }, -- a number constant: 5
-    Boolean =        { fg = minimalist.nord9_gui }, -- a boolean constant: TRUE, false
-    Float =          { fg = minimalist.nord15_gui }, -- a floating point constant: 2.3e10
-    Statement =      { fg = minimalist.nord9_gui }, -- any statement
-    Label =          { fg = minimalist.nord9_gui }, -- case, default, etc.
-    Operator =       { fg = minimalist.nord9_gui }, -- sizeof", "+", "*", etc.
-    Exception =      { fg = minimalist.nord9_gui }, -- try, catch, throw
-    PreProc =        { fg = minimalist.nord9_gui }, -- generic Preprocessor
-    Include =        { fg = minimalist.nord9_gui }, -- preprocessor #include
-    Define =         { fg = minimalist.nord9_gui }, -- preprocessor #define
-    Macro =          { fg = minimalist.nord9_gui }, -- same as Define
-    Typedef =        { fg = minimalist.nord9_gui }, -- A typedef
-    PreCondit =      { fg = minimalist.nord13_gui }, -- preprocessor #if, #else, #endif, etc.
-    Special =        { fg = minimalist.nord4_gui }, -- any special symbol
-    SpecialChar =    { fg = minimalist.nord13_gui }, -- special character in a constant
-    Tag =            { fg = minimalist.nord4_gui }, -- you can use CTRL-] on this
-    Delimiter =      { fg = minimalist.nord6_gui }, -- character that needs attention like , or .
-    SpecialComment = { fg = minimalist.nord8_gui }, -- special things inside a comment
-    Debug =          { fg = minimalist.nord11_gui }, -- debugging statements
-    Underlined =     { fg = minimalist.nord14_gui, bg = minimalist.none, style = 'underline' }, -- text that stands out, HTML links
-    Ignore =         { fg = minimalist.nord1_gui }, -- left blank, hidden
-    Error =          { fg = minimalist.nord11_gui, bg = minimalist.none, style = 'bold,underline' }, -- any erroneous construct
-    Todo =           { fg = minimalist.nord13_gui, bg = minimalist.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    Conceal =        { fg = minimalist.none, bg = minimalist.nord0_gui },
+    Type =           { fg = minimalist.bright_bg_1_2, stye = 'bold' }, -- int, long, char, etc.
+    StorageClass =   { fg = minimalist.bright_bg_1_2 }, -- static, register, volatile, etc.
+    Structure =      { fg = minimalist.bright_bg_1_2 }, -- struct, union, enum, etc.
+    Constant =       { fg = minimalist.fg }, -- any constant
+    Character =      { fg = minimalist.standout_more }, -- any character constant: 'c', '\n'
+    Number =         { fg = minimalist.standout_more }, -- a number constant: 5
+    Boolean =        { fg = minimalist.standout_more }, -- a boolean constant: TRUE, false
+    Float =          { fg = minimalist.standout_more }, -- a floating point constant: 2.3e10
+    Statement =      { fg = minimalist.bright_bg_1_2 }, -- any statement
+    Label =          { fg = minimalist.bright_bg_1_2 }, -- case, default, etc.
+    Operator =       { fg = minimalist.bright_bg_1_2 }, -- sizeof", "+", "*", etc.
+    Exception =      { fg = minimalist.bright_bg_1_2 }, -- try, catch, throw
+    PreProc =        { fg = minimalist.standout }, -- generic Preprocessor
+    Include =        { fg = minimalist.bright_bg_1_2 }, -- preprocessor #include
+    Define =         { fg = minimalist.bright_bg_1_2 }, -- preprocessor #define
+    Macro =          { fg = minimalist.bright_bg_1_2 }, -- same as Define
+    Typedef =        { fg = minimalist.bright_bg_1_2 }, -- A typedef
+    PreCondit =      { fg = minimalist.bg_1 }, -- preprocessor #if, #else, #endif, etc.
+    Special =        { fg = minimalist.fg }, -- any special symbol
+    SpecialChar =    { fg = minimalist.bg_1 }, -- special character in a constant
+    Tag =            { fg = minimalist.fg }, -- you can use CTRL-] on this
+    Delimiter =      { fg = minimalist.bg_1 }, -- character that needs attention like , or .
+    SpecialComment = { fg = minimalist.standout_less }, -- special things inside a comment
+    Debug =          { fg = minimalist.standout }, -- debugging statements
+    Underlined =     { fg = minimalist.standout_more, bg = minimalist.none, style = 'underline' }, -- text that stands out, HTML links
+    Ignore =         { fg = minimalist.dark_bg_2 }, -- left blank, hidden
+    Error =          { fg = minimalist.standout_more, bg = minimalist.none, style = 'bold,underline' }, -- any erroneous construct
+    Todo =           { fg = minimalist.bg_1, bg = minimalist.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Conceal =        { fg = minimalist.none, bg = minimalist.bg },
 
+    -- Help docs
+    helpCommand = { fg = minimalist.standout_less },
 
-    htmlLink = { fg = minimalist.nord14_gui, style = "underline" },
-    htmlH1 =   { fg = minimalist.nord8_gui, style = "bold" },
-    htmlH2 =   { fg = minimalist.nord11_gui, style = "bold" },
-    htmlH3 =   { fg = minimalist.nord14_gui, style = "bold" },
-    htmlH4 =   { fg = minimalist.nord15_gui, style = "bold" },
-    htmlH5 =   { fg = minimalist.nord9_gui, style = "bold" },
-    markdownH1 = { fg = minimalist.nord8_gui, style = "bold" },
-    markdownH2 = { fg = minimalist.nord11_gui, style = "bold" },
-    markdownH3 = { fg = minimalist.nord14_gui, style = "bold" },
-    markdownH1Delimiter = { fg = minimalist.nord8_gui },
-    markdownH2Delimiter = { fg = minimalist.nord11_gui },
-    markdownH3Delimiter = { fg = minimalist.nord14_gui },
+    -- R syntax
+
+    rType                = { fg = minimalist.standout_less },
+    rFunctionName        = { fg = minimalist.standout },
+    rKeywordFunction     = { fg = minimalist.bright_bg_1_2, style = 'bold' },
+    rCommentKey          = { fg = minimalist.dark_bg_1 },
+    rCodeSection         = { fg = minimalist.standout_special_1, style = 'bold' },
+    rCodeSectionEndDelim = { fg = minimalist.bg_2 },
+
+    -- Doc
+    rOTitle      = { fg = minimalist.bright_bg_1, style = 'bold' },
+    rOTitleBlock = { fg = minimalist.bright_bg_1 },
+    rOBlock      = { fg = minimalist.bright_bg_1 },
+    rOTag        = { fg = minimalist.standout_special_3 },
+    rOCommentKey = { fg = minimalist.dark_bg_1 },
+
+    -- Julia syntax
+
+    -- Literal `function`, `macro`, `struct`, etc
+    juliaBlKeywordStart_1 = { fg = minimalist.bright_bg_1_2, style = 'bold' },
+    juliaBlKeywordStart_2 = { fg = minimalist.standout },
+    juliaBlKeywordEnd = { fg = minimalist.bg_2 },  -- TODO Previously, bg_1 is used
+
+    juliaFunctionName = { fg = minimalist.standout },
+    juliaMacroDelimiter = { fg = minimalist.standout_special_1 },
+    juliaMyMacro = { fg = minimalist.standout_less },
+    juliaConditional = { fg = minimalist.standout },
+    juliaException = { fg = minimalist.standout },
+    juliaFunctionCall = { fg = minimalist.standout_less },
+    juliaParDelim = { fg = minimalist.bg_1 },
+    juliaComma = { fg = minimalist.bg_1 },
+    juliaSemicolon = { fg = minimalist.bg_1 },
+    juliaInfixKeyword = { fg = minimalist.bright_bg_1_2 },
+    juliaComprehensionFor = { fg = minimalist.standout },
+    juliaBlKeyword = { fg = minimalist.standout },
+    juliaStringDelim = { fg = minimalist.bg_1 },  -- String's quotes
+    juliaStringPrefixed = { fg = minimalist.standout_less },  -- R's func, etc
+    -- Doc
+    juliaDocStringDelim = { fg = minimalist.dark_bg_1 },
+    juliaDocString = { fg = minimalist.bright_bg_1 },
+    juliacocCode = { fg = minimalist.fg },
+    helpExample = { fg = minimalist.standout_less },
+
+    htmlLink = { fg = minimalist.standout_more, style = "underline" },
+    htmlH1 =   { fg = minimalist.standout_less, style = "bold" },
+    htmlH2 =   { fg = minimalist.standout, style = "bold" },
+    htmlH3 =   { fg = minimalist.standout_more, style = "bold" },
+    htmlH4 =   { fg = minimalist.standout_more, style = "bold" },
+    htmlH5 =   { fg = minimalist.bright_bg_1_2, style = "bold" },
+    markdownH1 = { fg = minimalist.standout_less, style = "bold" },
+    markdownH2 = { fg = minimalist.standout, style = "bold" },
+    markdownH3 = { fg = minimalist.standout_more, style = "bold" },
+    markdownH1Delimiter = { fg = minimalist.standout_less },
+    markdownH2Delimiter = { fg = minimalist.standout },
+    markdownH3Delimiter = { fg = minimalist.standout_more },
   }
 
   	-- Italic comments
 	if vim.g.minimalist_italic == true then
-		syntax.Conditional =		{ fg = minimalist.nord9_gui, bg = minimalist.none, style = 'italic' } -- italic if, then, else, endif, switch, etc.
-		syntax.Keyword =			{ fg = minimalist.nord9_gui, bg = minimalist.none, style = 'italic' } -- italic for, do, while, etc.
-		syntax.Repeat =				{ fg = minimalist.nord9_gui, bg = minimalist.none, style = 'italic' } -- italic any other keyword
-		syntax.Comment =		{ fg = minimalist.nord3_gui_bright, bg = minimalist.none, style = 'italic' } -- italic comments
-		syntax.Function =		{ fg = minimalist.nord8_gui, bg = minimalist.none, style = 'italic' } -- italic funtion names
-		syntax.Identifier =		{ fg = minimalist.nord9_gui, bg = minimalist.none, style = 'italic' }; -- any variable name
-    syntax.String = { fg = minimalist.nord14_gui, bg = minimalist.none, style= 'italic' } -- any string
+		syntax.Conditional =		{ fg = minimalist.bright_bg_1_2, bg = minimalist.none, style = 'italic' } -- italic if, then, else, endif, switch, etc.
+		syntax.Keyword =			{ fg = minimalist.standout_special_3, bg = minimalist.none, style = 'italic' } -- italic for, do, while, etc.
+		syntax.Repeat =				{ fg = minimalist.standout, bg = minimalist.none, style = 'italic' } -- italic any other keyword
+		syntax.Comment =		{ fg = minimalist.bg_2, bg = minimalist.none, style = 'italic' } -- italic comments
+		syntax.Function =		{ fg = minimalist.standout_less, bg = minimalist.none, style = 'italic' } -- italic funtion names
+		syntax.Identifier =		{ fg = minimalist.bright_bg_1_2, bg = minimalist.none, style = 'italic' }; -- any variable name
+    syntax.String = { fg = minimalist.standout_more, bg = minimalist.none, style= 'italic' } -- any string
 	else
-		syntax.Comment =		{fg = minimalist.nord3_gui_bright} -- normal comments
-		syntax.Conditional =		{ fg = minimalist.nord9_gui } -- normal if, then, else, endif, switch, etc.
-		syntax.Keyword =			{ fg = minimalist.nord9_gui } -- normal for, do, while, etc.
-		syntax.Repeat =				{ fg = minimalist.nord9_gui } -- normal any other keyword
-		syntax.Function =		{ fg = minimalist.nord8_gui} -- normal function names
-		syntax.Identifier =		{ fg = minimalist.nord9_gui}; -- any variable name
-    syntax.String = { fg = minimalist.nord14_gui } -- any string
+		syntax.Comment =		{fg = minimalist.bg_2} -- normal comments
+		syntax.Conditional =		{ fg = minimalist.bright_bg_1_2 } -- normal if, then, else, endif, switch, etc.
+		syntax.Keyword =			{ fg = minimalist.standout_special_3 } -- normal for, do, while, etc.
+		syntax.Repeat =				{ fg = minimalist.standout } -- normal any other keyword
+		syntax.Function =		{ fg = minimalist.standout_less} -- normal function names
+		syntax.Identifier =		{ fg = minimalist.bright_bg_1_2}; -- any variable name
+    syntax.String = { fg = minimalist.standout_more } -- any string
 	end
 
   return syntax
@@ -78,117 +123,139 @@ theme.loadEditor = function ()
     -- Editor highlight groups
 
   local editor = {
-    NormalFloat =      { fg = minimalist.nord4_gui, bg = minimalist.float }, -- normal text and background color
-    ColorColumn =      { fg = minimalist.none, bg = minimalist.nord1_gui }, --  used for the columns set with 'colorcolumn'
-    Conceal =          { fg = minimalist.nord1_gui }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Cursor =           { fg = minimalist.nord4_gui, bg = minimalist.none, style = 'reverse' }, -- the character under the cursor
-    CursorIM =         { fg = minimalist.nord5_gui, bg = minimalist.none, style = 'reverse' }, -- like Cursor, but used when in IME mode
-    Directory =        { fg = minimalist.nord7_gui, bg = minimalist.none }, -- directory names (and other special names in listings)
-    DiffAdd =          { fg = minimalist.nord14_gui, bg = minimalist.none, style = 'reverse' }, -- diff mode: Added line
-    DiffChange =       { fg = minimalist.nord12_gui, bg = minimalist.none, style = 'reverse' }, --  diff mode: Changed line
-    DiffDelete =       { fg = minimalist.nord11_gui, bg = minimalist.none, style = 'reverse' }, -- diff mode: Deleted line
-    DiffText =         { fg = minimalist.nord15_gui, bg = minimalist.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
-    EndOfBuffer =      { fg = minimalist.nord1_gui },
+    MsgArea =          { fg = minimalist.fg },  -- Command line
+    NormalFloat =      { fg = minimalist.fg, bg = minimalist.bg }, -- normal text and background color
+    ColorColumn =      { fg = minimalist.none, bg = minimalist.dark_bg_2 }, --  used for the columns set with 'colorcolumn'
+    Conceal =          { fg = minimalist.dark_bg_2 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+    Cursor =           { fg = minimalist.cursor_fg, bg = minimalist.cursor_bg, style = 'reverse' }, -- the character under the cursor
+    CursorIM =         { fg = minimalist.cursor_fg, bg = minimalist.cursor_bg, style = 'reverse' }, -- the character under the cursor
+    TermCursor =       { fg = minimalist.cursor_fg, bg = minimalist.cursor_bg, style = 'reverse' }, -- the character under the cursor
+    TermCursorNC =     { fg = minimalist.cursor_fg, bg = minimalist.cursor_bg, style = 'reverse' }, -- the character under the cursor
+    Directory =        { fg = minimalist.bright_bg_1, bg = minimalist.none }, -- directory names (and other special names in listings)
+    DiffAdd =          { fg = minimalist.standout_more, bg = minimalist.none, style = 'reverse' }, -- diff mode: Added line
+    DiffChange =       { fg = minimalist.diff_mode_added_line, bg = minimalist.none, style = 'reverse' }, --  diff mode: Changed line
+    DiffDelete =       { fg = minimalist.standout, bg = minimalist.none, style = 'reverse' }, -- diff mode: Deleted line
+    DiffText =         { fg = minimalist.standout_more, bg = minimalist.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
+    EndOfBuffer =      { fg = minimalist.dark_bg_2 },
     ErrorMsg =         { fg = minimalist.none },
-    Folded =           { fg = minimalist.nord1_gui, minimalist.none, style = 'italic' },
-    FoldColumn =       { fg = minimalist.nord7_gui },
-    IncSearch =        { fg = minimalist.nord6_gui, bg = minimalist.nord10_gui },
-    LineNr =           { fg = minimalist.nord3_gui_bright },
-    CursorLineNr =     { fg = minimalist.nord4_gui },
-    MatchParen =       { fg = minimalist.nord15_gui, bg = minimalist.none, style = 'bold' },
-    ModeMsg =          { fg = minimalist.nord4_gui },
-    MoreMsg =          { fg = minimalist.nord4_gui },
-    NonText =          { fg = minimalist.nord1_gui },
-    Pmenu =            { fg = minimalist.nord4_gui, bg = minimalist.nord2_gui },
-    PmenuSel =         { fg = minimalist.nord4_gui, bg = minimalist.nord10_gui },
-    PmenuSbar =        { fg = minimalist.nord4_gui, bg = minimalist.nord2_gui },
-    PmenuThumb =       { fg = minimalist.nord4_gui, bg = minimalist.nord4_gui },
-    Question =         { fg = minimalist.nord14_gui },
-    QuickFixLine =     { fg = minimalist.nord4_gui, minimalist.nord6_gui, style = 'reverse' },
-    qfLineNr =         { fg = minimalist.nord4_gui, minimalist.nord6_gui, style = 'reverse' },
-    Search =           { fg = minimalist.nord1_gui, bg = minimalist.nord6_gui, style = 'reverse' },
-    SpecialKey =       { fg = minimalist.nord9_gui },
-    SpellBad =         { fg = minimalist.nord11_gui, bg = minimalist.none, style = 'italic,undercurl' },
-    SpellCap =         { fg = minimalist.nord7_gui, bg = minimalist.none, style = 'italic,undercurl' },
-    SpellLocal =       { fg = minimalist.nord8_gui, bg = minimalist.none, style = 'italic,undercurl' },
-    SpellRare =        { fg = minimalist.nord9_gui, bg = minimalist.none, style = 'italic,undercurl' },
-    StatusLine =       { fg = minimalist.nord4_gui, bg = minimalist.nord2_gui },
-    StatusLineNC =     { fg = minimalist.nord4_gui, bg = minimalist.nord1_gui },
-    StatusLineTerm =   { fg = minimalist.nord4_gui, bg = minimalist.nord2_gui },
-    StatusLineTermNC = { fg = minimalist.nord4_gui, bg = minimalist.nord1_gui },
-    TabLineFill =      { fg = minimalist.nord4_gui },
-    TablineSel =       { fg = minimalist.nord8_gui, bg = minimalist.nord3_gui },
-    Tabline =          { fg = minimalist.nord4_gui },
-    Title =            { fg = minimalist.nord14_gui, bg = minimalist.none, style = 'bold' },
-    Visual =           { fg = minimalist.none, bg = minimalist.nord1_gui },
-    VisualNOS =        { fg = minimalist.none, bg = minimalist.nord1_gui },
-    WarningMsg =       { fg = minimalist.nord15_gui },
-    WildMenu =         { fg = minimalist.nord12_gui, bg = minimalist.none, style = 'bold' },
+    Folded =           { fg = minimalist.dark_bg_2, minimalist.none, style = 'italic' },
+    FoldColumn =       { fg = minimalist.bright_bg_1 },
+    LineNr =           { fg = minimalist.dark_bg_1 },
+    CursorLineNr =     { fg = minimalist.fg },
+    MatchParen =       { fg = minimalist.standout, bg = minimalist.none, style = 'bold' },
+    ModeMsg =          { fg = minimalist.standout_more },
+    MoreMsg =          { fg = minimalist.standout_more },
+    NonText =          { fg = minimalist.dark_bg_2 },
+    Pmenu =            { fg = minimalist.fg, bg = minimalist.bg },
+    PmenuSel =         { fg = minimalist.standout, bg = minimalist.slightly_lighter_bg },
+    PmenuSbar =        {                      bg = minimalist.bg },
+    PmenuThumb =       {                      bg = minimalist.dark_bg_1 },
+    Question =         { fg = minimalist.standout_more },
+    QuickFixLine =     { fg = minimalist.fg, minimalist.bg_1, style = 'reverse' },
+    qfLineNr =         { fg = minimalist.fg, minimalist.bg_1, style = 'reverse' },
+    IncSearch =        { fg = minimalist.none, bg = minimalist.standout_special_2_2 },
+    Search =           { fg = minimalist.none, bg = minimalist.standout_special_2 },
+    SpecialKey =       { fg = minimalist.bright_bg_1_2 },
+    SpellBad =         { fg = minimalist.standout, bg = minimalist.none, style = 'italic,undercurl' },
+    SpellCap =         { fg = minimalist.bright_bg_1, bg = minimalist.none, style = 'italic,undercurl' },
+    SpellLocal =       { fg = minimalist.standout_less, bg = minimalist.none, style = 'italic,undercurl' },
+    SpellRare =        { fg = minimalist.bright_bg_1_2, bg = minimalist.none, style = 'italic,undercurl' },
+    StatusLine =       { fg = minimalist.bg_3, bg = minimalist.slightly_lighter_bg },
+    StatusLineNC =     { fg = minimalist.bg_3, bg = minimalist.slightly_lighter_bg },  -- Hacky way to create a separator with very subtle color
+    StatusLineTerm =   { fg = minimalist.bg_3, bg = minimalist.bg },
+    StatusLineTermNC = { fg = minimalist.bg_3, bg = minimalist.bg },
+    TabLineFill =      { fg = minimalist.fg },
+    TablineSel =       { fg = minimalist.standout_less, bg = minimalist.standout },
+    Tabline =          { fg = minimalist.fg },
+    Title =            { fg = minimalist.standout_more, bg = minimalist.none, style = 'bold' },
+    Visual =           { fg = minimalist.none, bg = minimalist.dark_bg_2 },
+    VisualNOS =        { fg = minimalist.none, bg = minimalist.dark_bg_2 },
+    WarningMsg =       { fg = minimalist.standout_more },
+    WildMenu =         { fg = minimalist.diff_mode_added_line, bg = minimalist.none, style = 'bold' },
     CursorColumn =     { fg = minimalist.none, bg = minimalist.cursorlinefg },
     CursorLine =       { fg = minimalist.none, bg = minimalist.cursorlinefg },
-    ToolbarLine =      { fg = minimalist.nord4_gui, bg = minimalist.nord1_gui },
-    ToolbarButton =    { fg = minimalist.nord4_gui, bg = minimalist.none, style = 'bold' },
-    NormalMode =       { fg = minimalist.nord4_gui, bg = minimalist.none, style = 'reverse' },
-    InsertMode =       { fg = minimalist.nord14_gui, bg = minimalist.none, style = 'reverse' },
-    ReplacelMode =     { fg = minimalist.nord11_gui, bg = minimalist.none, style = 'reverse' },
-    VisualMode =       { fg = minimalist.nord9_gui, bg = minimalist.none, style = 'reverse' },
-    CommandMode =      { fg = minimalist.nord4_gui, bg = minimalist.none, style = 'reverse' },
-    Warnings =         { fg = minimalist.nord15_gui },
+    ToolbarLine =      { fg = minimalist.fg, bg = minimalist.dark_bg_2 },
+    ToolbarButton =    { fg = minimalist.fg, bg = minimalist.none, style = 'bold' },
+    NormalMode =       { fg = minimalist.fg, bg = minimalist.none, style = 'reverse' },
+    InsertMode =       { fg = minimalist.standout_more, bg = minimalist.none, style = 'reverse' },
+    ReplacelMode =     { fg = minimalist.standout, bg = minimalist.none, style = 'reverse' },
+    VisualMode =       { fg = minimalist.bright_bg_1_2, bg = minimalist.none, style = 'reverse' },
+    CommandMode =      { fg = minimalist.fg, bg = minimalist.none, style = 'reverse' },
+    Warnings =         { fg = minimalist.standout_more },
 
-    healthError =   { fg = minimalist.nord11_gui },
-    healthSuccess = { fg = minimalist.nord14_gui },
-    healthWarning = { fg = minimalist.nord15_gui },
+    healthError =   { fg = minimalist.standout },
+    healthSuccess = { fg = minimalist.standout_more },
+    healthWarning = { fg = minimalist.standout_more },
 
     -- dashboard
-    DashboardShortCut = { fg = minimalist.nord7_gui },
-    DashboardHeader =   { fg = minimalist.nord9_gui },
-    DashboardCenter =   { fg = minimalist.nord8_gui },
-    DashboardFooter =   { fg = minimalist.nord14_gui, style = "italic" },
+    DashboardShortCut = { fg = minimalist.bright_bg_1 },
+    DashboardHeader =   { fg = minimalist.bright_bg_1_2 },
+    DashboardCenter =   { fg = minimalist.standout_less },
+    DashboardFooter =   { fg = minimalist.standout_more, style = "italic" },
 
     -- BufferLine
-    BufferLineIndicatorSelected = { fg = minimalist.nord0_gui },
-    BufferLineFill =              { bg = minimalist.nord0_gui },
+    BufferLineIndicatorSelected = { fg = minimalist.bg },
+    BufferLineFill =              { bg = minimalist.bg },
   }
 
   -- Options:
 
   --Set transparent background
   if vim.g.minimalist_disable_background then
-    editor.Normal =     { fg = minimalist.nord4_gui, bg = minimalist.none } -- normal text and background color
-    editor.SignColumn = { fg = minimalist.nord4_gui, bg = minimalist.none }
+    editor.Normal =     { fg = minimalist.fg, bg = minimalist.none } -- normal text and background color
+    editor.SignColumn = { fg = minimalist.fg, bg = minimalist.none }
   else
-    editor.Normal =     { fg = minimalist.nord4_gui, bg = minimalist.nord0_gui } -- normal text and background color
-    editor.SignColumn = { fg = minimalist.nord4_gui, bg = minimalist.nord0_gui }
+    editor.Normal =     { fg = minimalist.fg, bg = minimalist.bg } -- normal text and background color
+    editor.SignColumn = { fg = minimalist.fg, bg = minimalist.bg }
   end
 
   -- Remove window split borders
   if vim.g.minimalist_borders then
-    editor.VertSplit = { fg = minimalist.nord2_gui }
+    editor.VertSplit = { fg = minimalist.dark_bg_1 }
   else
-    editor.VertSplit = { fg = minimalist.nord0_gui }
+    editor.VertSplit = { fg = minimalist.bg }
   end
 
   return editor
 end
 
 theme.loadTerminal = function ()
+  -- *cterm-colors*
+  -- NR-16   NR-8    COLOR NAME ~
+  -- 0	    0	    Black
+  -- 1	    4	    DarkBlue
+  -- 2	    2	    DarkGreen
+  -- 3	    6	    DarkCyan
+  -- 4	    1	    DarkRed
+  -- 5	    5	    DarkMagenta
+  -- 6	    3	    Brown, DarkYellow
+  -- 7	    7	    LightGray, LightGrey, Gray, Grey
+  -- 8	    0*	    DarkGray, DarkGrey
+  -- 9	    4*	    Blue, LightBlue
+  -- 10	    2*	    Green, LightGreen
+  -- 11	    6*	    Cyan, LightCyan
+  -- 12	    1*	    Red, LightRed
+  -- 13	    5*	    Magenta, LightMagenta
+  -- 14	    3*	    Yellow, LightYellow
+  -- 15	    7*	    White
 
-  vim.g.terminal_color_0 = minimalist.nord1_gui
-  vim.g.terminal_color_1 = minimalist.nord11_gui
-  vim.g.terminal_color_2 = minimalist.nord14_gui
-  vim.g.terminal_color_3 = minimalist.nord13_gui
-  vim.g.terminal_color_4 = minimalist.nord9_gui
-  vim.g.terminal_color_5 = minimalist.nord15_gui
-  vim.g.terminal_color_6 = minimalist.nord8_gui
-  vim.g.terminal_color_7 = minimalist.nord5_gui
-  vim.g.terminal_color_8 = minimalist.nord3_gui
-  vim.g.terminal_color_9 = minimalist.nord11_gui
-  vim.g.terminal_color_10 = minimalist.nord14_gui
-  vim.g.terminal_color_11 = minimalist.nord13_gui
-  vim.g.terminal_color_12 = minimalist.nord9_gui
-  vim.g.terminal_color_13 = minimalist.nord15_gui
-  vim.g.terminal_color_14 = minimalist.nord7_gui
-  vim.g.terminal_color_15 = minimalist.nord6_gui
+  vim.g.terminal_color_0 = minimalist.dark_bg_1
+  vim.g.terminal_color_1 = minimalist.standout_more
+  vim.g.terminal_color_2 = minimalist.dark_standout_less_2  -- TODO Bold missing
+
+  vim.g.terminal_color_3 = minimalist.standout_more
+  vim.g.terminal_color_4 = minimalist.standout_less  -- TODO Bold missing
+  vim.g.terminal_color_5 = minimalist.standout
+  vim.g.terminal_color_6 = minimalist.dark_standout_less
+  vim.g.terminal_color_7 = minimalist.dark_standout_less
+  vim.g.terminal_color_8 = minimalist.bg_2
+  vim.g.terminal_color_9 = minimalist.bright_standout_less
+  vim.g.terminal_color_10 = minimalist.dark_standout_less_2
+  vim.g.terminal_color_11 = minimalist.standout
+  vim.g.terminal_color_12 = minimalist.standout_less
+  vim.g.terminal_color_13 = minimalist.standout_more -- TODO What is this?
+  vim.g.terminal_color_14 = minimalist.standout
+  vim.g.terminal_color_15 = minimalist.fg
 
 end
 
@@ -196,59 +263,59 @@ theme.loadTreeSitter = function ()
   -- TreeSitter highlight groups
 
   local treesitter = {
-    TSAnnotation =        { fg = minimalist.nord12_gui },    -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
-    TSCharacter=          { fg = minimalist.nord14_gui },    -- For characters.
-    TSConstructor =       { fg = minimalist.nord9_gui }, -- For constructor calls and definitions: `=                                                                          { }` in Lua, and Java constructors.
-    TSConstant =          { fg = minimalist.nord13_gui },    -- For constants
-    TSFloat =             { fg = minimalist.nord15_gui },    -- For floats
-    TSNumber =            { fg = minimalist.nord15_gui },    -- For all number
-    TSString =            { fg = minimalist.nord14_gui },    -- For strings.
+    TSAnnotation =        { fg = minimalist.diff_mode_added_line },    -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
+    TSCharacter=          { fg = minimalist.standout_more },    -- For characters.
+    TSConstructor =       { fg = minimalist.bright_bg_1_2 }, -- For constructor calls and definitions: `=                                                                          { }` in Lua, and Java constructors.
+    TSConstant =          { fg = minimalist.bg_1 },    -- For constants
+    TSFloat =             { fg = minimalist.standout_more },    -- For floats
+    TSNumber =            { fg = minimalist.standout_more },    -- For all number
+    TSString =            { fg = minimalist.standout_more },    -- For strings.
 
-    TSAttribute =         { fg = minimalist.nord15_gui },    -- (unstable) TODO: docs
-    TSBoolean=            { fg = minimalist.nord9_gui },    -- For booleans.
-    TSConstBuiltin =      { fg = minimalist.nord7_gui },    -- For constant that are built in the language: `nil` in Lua.
-    TSConstMacro =        { fg = minimalist.nord7_gui },    -- For constants that are defined by macros: `NULL` in C.
-    TSError =             { fg = minimalist.nord11_gui },    -- For syntax/parser errors.
-    TSException =         { fg = minimalist.nord15_gui },    -- For exception related keywords.
-    TSField =             { fg = minimalist.nord4_gui }, -- For fields.
-    TSFuncMacro =         { fg = minimalist.nord7_gui },    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-    TSInclude =           { fg = minimalist.nord9_gui },    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    TSLabel =             { fg = minimalist.nord15_gui }, -- For labels: `label:` in C and `:label:` in Lua.
-    TSNamespace =         { fg = minimalist.nord4_gui},    -- For identifiers referring to modules and namespaces.
-    TSOperator =          { fg = minimalist.nord9_gui }, -- For any operator: `+`, but also `->` and `*` in C.
-    TSParameter =         { fg = minimalist.nord10_gui }, -- For parameters of a function.
-    TSParameterReference= { fg = minimalist.nord10_gui },    -- For references to parameters of a function.
-    TSProperty =          { fg = minimalist.nord10_gui }, -- Same as `TSField`.
-    TSPunctDelimiter =    { fg = minimalist.nord8_gui }, -- For delimiters ie: `.`
-    TSPunctBracket =      { fg = minimalist.nord8_gui }, -- For brackets and parens.
-    TSPunctSpecial =      { fg = minimalist.nord8_gui }, -- For special punctutation that does not fall in the catagories before.
-    TSStringRegex =       { fg = minimalist.nord7_gui }, -- For regexes.
-    TSStringEscape =      { fg = minimalist.nord1_gui }, -- For escape characters within a string.
-    TSSymbol =            { fg = minimalist.nord15_gui },    -- For identifiers referring to symbols or atoms.
-    TSType =              { fg = minimalist.nord9_gui},    -- For types.
-    TSTypeBuiltin =       { fg = minimalist.nord9_gui},    -- For builtin types.
-    TSTag =               { fg = minimalist.nord4_gui },    -- Tags like html tag names.
-    TSTagDelimiter =      { fg = minimalist.nord15_gui },    -- Tag delimiter like `<` `>` `/`
-    TSText =              { fg = minimalist.nord4_gui },    -- For strings considenord11_gui text in a markup language.
-    TSTextReference =     { fg = minimalist.nord15_gui }, -- FIXME
-    TSEmphasis =          { fg = minimalist.nord10_gui },    -- For text to be represented with emphasis.
-    TSUnderline =         { fg = minimalist.nord4_gui, bg = minimalist.none, style = 'underline' },    -- For text to be represented with an underline.
-    TSTitle =             { fg = minimalist.nord10_gui, bg = minimalist.none, style = 'bold' },    -- Text that is part of a title.
-    TSLiteral =           { fg = minimalist.nord4_gui },    -- Literal text.
-    TSURI =               { fg = minimalist.nord14_gui },    -- Any URI like a link or email.        TSAnnotation =                                                                  { fg = minimalist.nord11_gui },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+    TSAttribute =         { fg = minimalist.standout_more },    -- (unstable) TODO: docs
+    TSBoolean=            { fg = minimalist.standout_more },    -- For booleans.
+    TSConstBuiltin =      { fg = minimalist.bright_bg_1 },    -- For constant that are built in the language: `nil` in Lua.
+    TSConstMacro =        { fg = minimalist.bright_bg_1 },    -- For constants that are defined by macros: `NULL` in C.
+    TSError =             { fg = minimalist.standout },    -- For syntax/parser errors.
+    TSException =         { fg = minimalist.standout_more },    -- For exception related keywords.
+    TSField =             { fg = minimalist.fg }, -- For fields.
+    TSFuncMacro =         { fg = minimalist.bright_bg_1 },    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
+    TSInclude =           { fg = minimalist.bright_bg_1_2 },    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+    TSLabel =             { fg = minimalist.standout_more }, -- For labels: `label:` in C and `:label:` in Lua.
+    TSNamespace =         { fg = minimalist.fg},    -- For identifiers referring to modules and namespaces.
+    TSOperator =          { fg = minimalist.bright_bg_1_2 }, -- For any operator: `+`, but also `->` and `*` in C.
+    TSParameter =         { fg = minimalist.param }, -- For parameters of a function.
+    TSParameterReference= { fg = minimalist.param },    -- For references to parameters of a function.
+    TSProperty =          { fg = minimalist.param }, -- Same as `TSField`.
+    TSPunctDelimiter =    { fg = minimalist.standout_less }, -- For delimiters ie: `.`
+    TSPunctBracket =      { fg = minimalist.standout_less }, -- For brackets and parens.
+    TSPunctSpecial =      { fg = minimalist.standout_less }, -- For special punctutation that does not fall in the catagories before.
+    TSStringRegex =       { fg = minimalist.bright_bg_1 }, -- For regexes.
+    TSStringEscape =      { fg = minimalist.dark_bg_2 }, -- For escape characters within a string.
+    TSSymbol =            { fg = minimalist.standout_more },    -- For identifiers referring to symbols or atoms.
+    TSType =              { fg = minimalist.bright_bg_1_2},    -- For types.
+    TSTypeBuiltin =       { fg = minimalist.bright_bg_1_2},    -- For builtin types.
+    TSTag =               { fg = minimalist.fg },    -- Tags like html tag names.
+    TSTagDelimiter =      { fg = minimalist.standout_more },    -- Tag delimiter like `<` `>` `/`
+    TSText =              { fg = minimalist.fg },    -- For strings considenord11_gui text in a markup language.
+    TSTextReference =     { fg = minimalist.standout_more }, -- FIXME
+    TSEmphasis =          { fg = minimalist.param },    -- For text to be represented with emphasis.
+    TSUnderline =         { fg = minimalist.fg, bg = minimalist.none, style = 'underline' },    -- For text to be represented with an underline.
+    TSTitle =             { fg = minimalist.param, bg = minimalist.none, style = 'bold' },    -- Text that is part of a title.
+    TSLiteral =           { fg = minimalist.fg },    -- Literal text.
+    TSURI =               { fg = minimalist.standout_more },    -- Any URI like a link or email.        TSAnnotation =                                                                  { fg = minimalist.standout },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 
   }
 
-  treesitter.TSComment=          { fg = minimalist.nord3_gui_bright }
-  treesitter.TSConditional =     { fg = minimalist.nord9_gui }   -- For keywords related to conditionnals.
-  treesitter.TSKeyword =         { fg = minimalist.nord9_gui } -- For keywords that don't fall in previous categories.
-  treesitter.TSRepeat =          { fg = minimalist.nord9_gui }    -- For keywords related to loops.
-  treesitter.TSKeywordFunction = { fg = minimalist.nord8_gui }
-  treesitter.TSFunction =        { fg = minimalist.nord8_gui }    -- For fuction (calls and definitions).
-  treesitter.TSMethod =          { fg = minimalist.nord7_gui }    -- For method calls and definitions.
-  treesitter.TSFuncBuiltin =     { fg = minimalist.nord8_gui }
-  treesitter.TSVariable =        { fg = minimalist.nord4_gui }-- Any variable name that does not have another highlight.
-  treesitter.TSVariableBuiltin = { fg = minimalist.nord4_gui }
+  treesitter.TSComment=          { fg = minimalist.bg_2 }
+  treesitter.TSConditional =     { fg = minimalist.bright_bg_1_2 }   -- For keywords related to conditionnals.
+  treesitter.TSKeyword =         { fg = minimalist.bright_bg_1_2 } -- For keywords that don't fall in previous categories.
+  treesitter.TSRepeat =          { fg = minimalist.bright_bg_1_2 }    -- For keywords related to loops.
+  treesitter.TSKeywordFunction = { fg = minimalist.standout_less }
+  treesitter.TSFunction =        { fg = minimalist.standout_less }    -- For fuction (calls and definitions).
+  treesitter.TSMethod =          { fg = minimalist.bright_bg_1 }    -- For method calls and definitions.
+  treesitter.TSFuncBuiltin =     { fg = minimalist.standout_less }
+  treesitter.TSVariable =        { fg = minimalist.fg }-- Any variable name that does not have another highlight.
+  treesitter.TSVariableBuiltin = { fg = minimalist.fg }
 
   return treesitter
 
@@ -258,29 +325,29 @@ theme.loadLSP = function ()
   -- Lsp highlight groups
 
   local lsp = {
-    LspDiagnosticsDefaultError =           { fg = minimalist.nord11_gui }, -- used for "Error" diagnostic virtual text
-    LspDiagnosticsSignError =              { fg = minimalist.nord11_gui }, -- used for "Error" diagnostic signs in sign column
-    LspDiagnosticsFloatingError =          { fg = minimalist.nord11_gui }, -- used for "Error" diagnostic messages in the diagnostics float
-    LspDiagnosticsVirtualTextError =       { fg = minimalist.nord11_gui }, -- Virtual text "Error"
-    LspDiagnosticsUnderlineError =         { style = 'undercurl', sp = minimalist.nord11_gui }, -- used to underline "Error" diagnostics.
-    LspDiagnosticsDefaultWarning =         { fg = minimalist.nord15_gui}, -- used for "Warning" diagnostic signs in sign column
-    LspDiagnosticsSignWarning =            { fg = minimalist.nord15_gui}, -- used for "Warning" diagnostic signs in sign column
-    LspDiagnosticsFloatingWarning =        { fg = minimalist.nord15_gui}, -- used for "Warning" diagnostic messages in the diagnostics float
-    LspDiagnosticsVirtualTextWarning =     { fg = minimalist.nord15_gui}, -- Virtual text "Warning"
-    LspDiagnosticsUnderlineWarning =       { style = 'undercurl', sp = minimalist.nord15_gui }, -- used to underline "Warning" diagnostics.
-    LspDiagnosticsDefaultInformation =     { fg = minimalist.nord10_gui }, -- used for "Information" diagnostic virtual text
-    LspDiagnosticsSignInformation =        { fg = minimalist.nord10_gui },  -- used for "Information" diagnostic signs in sign column
-    LspDiagnosticsFloatingInformation =    { fg = minimalist.nord10_gui }, -- used for "Information" diagnostic messages in the diagnostics float
-    LspDiagnosticsVirtualTextInformation = { fg = minimalist.nord10_gui }, -- Virtual text "Information"
-    LspDiagnosticsUnderlineInformation =   { style = 'undercurl', sp = minimalist.nord10_gui }, -- used to underline "Information" diagnostics.
-    LspDiagnosticsDefaultHint =            { fg = minimalist.nord9_gui  },  -- used for "Hint" diagnostic virtual text
-    LspDiagnosticsSignHint =               { fg = minimalist.nord9_gui  }, -- used for "Hint" diagnostic signs in sign column
-    LspDiagnosticsFloatingHint =           { fg = minimalist.nord9_gui  }, -- used for "Hint" diagnostic messages in the diagnostics float
-    LspDiagnosticsVirtualTextHint =        { fg = minimalist.nord9_gui  }, -- Virtual text "Hint"
-    LspDiagnosticsUnderlineHint =          { style = 'undercurl', sp = minimalist.nord10_gui }, -- used to underline "Hint" diagnostics.
-    LspReferenceText =                     { fg = minimalist.nord4_gui, bg = minimalist.nord1_gui }, -- used for highlighting "text" references
-    LspReferenceRead =                     { fg = minimalist.nord4_gui, bg = minimalist.nord1_gui }, -- used for highlighting "read" references
-    LspReferenceWrite =                    { fg = minimalist.nord4_gui, bg = minimalist.nord1_gui }, -- used for highlighting "write" references
+    LspDiagnosticsDefaultError =           { fg = minimalist.standout }, -- used for "Error" diagnostic virtual text
+    LspDiagnosticsSignError =              { fg = minimalist.standout }, -- used for "Error" diagnostic signs in sign column
+    LspDiagnosticsFloatingError =          { fg = minimalist.standout }, -- used for "Error" diagnostic messages in the diagnostics float
+    LspDiagnosticsVirtualTextError =       { fg = minimalist.standout }, -- Virtual text "Error"
+    LspDiagnosticsUnderlineError =         { style = 'undercurl', sp = minimalist.standout }, -- used to underline "Error" diagnostics.
+    LspDiagnosticsDefaultWarning =         { fg = minimalist.standout_more}, -- used for "Warning" diagnostic signs in sign column
+    LspDiagnosticsSignWarning =            { fg = minimalist.standout_more}, -- used for "Warning" diagnostic signs in sign column
+    LspDiagnosticsFloatingWarning =        { fg = minimalist.standout_more}, -- used for "Warning" diagnostic messages in the diagnostics float
+    LspDiagnosticsVirtualTextWarning =     { fg = minimalist.standout_more}, -- Virtual text "Warning"
+    LspDiagnosticsUnderlineWarning =       { style = 'undercurl', sp = minimalist.standout_more }, -- used to underline "Warning" diagnostics.
+    LspDiagnosticsDefaultInformation =     { fg = minimalist.param }, -- used for "Information" diagnostic virtual text
+    LspDiagnosticsSignInformation =        { fg = minimalist.param },  -- used for "Information" diagnostic signs in sign column
+    LspDiagnosticsFloatingInformation =    { fg = minimalist.param }, -- used for "Information" diagnostic messages in the diagnostics float
+    LspDiagnosticsVirtualTextInformation = { fg = minimalist.param }, -- Virtual text "Information"
+    LspDiagnosticsUnderlineInformation =   { style = 'undercurl', sp = minimalist.param }, -- used to underline "Information" diagnostics.
+    LspDiagnosticsDefaultHint =            { fg = minimalist.bright_bg_1_2  },  -- used for "Hint" diagnostic virtual text
+    LspDiagnosticsSignHint =               { fg = minimalist.bright_bg_1_2  }, -- used for "Hint" diagnostic signs in sign column
+    LspDiagnosticsFloatingHint =           { fg = minimalist.bright_bg_1_2  }, -- used for "Hint" diagnostic messages in the diagnostics float
+    LspDiagnosticsVirtualTextHint =        { fg = minimalist.bright_bg_1_2  }, -- Virtual text "Hint"
+    LspDiagnosticsUnderlineHint =          { style = 'undercurl', sp = minimalist.param }, -- used to underline "Hint" diagnostics.
+    LspReferenceText =                     { fg = minimalist.fg, bg = minimalist.dark_bg_2 }, -- used for highlighting "text" references
+    LspReferenceRead =                     { fg = minimalist.fg, bg = minimalist.dark_bg_2 }, -- used for highlighting "read" references
+    LspReferenceWrite =                    { fg = minimalist.fg, bg = minimalist.dark_bg_2 }, -- used for highlighting "write" references
   }
 
   return lsp
@@ -292,149 +359,209 @@ theme.loadPlugins = function()
 
   local plugins = {
 
+    -- Spectre
+    SpectreFileDirectory = { fg = minimalist.standout },
+    SpectreFileName = { fg = minimalist.bright_bg_1_2, style = 'bold,underline' },
+    SpectreUI      = { fg = minimalist.bg_3, style = 'italic' },
+    SpectreSearch  = { fg = minimalist.standout_more },
+    SpectreReplace = { bg = minimalist.SpectreReplace_bg },
+    SpectreBorder  = { fg = minimalist.dark_bg_1 },
+
+    -- toggleterm
+    ToggleTermBorder = { fg = minimalist.dark_bg_1 },
+
+    -- symbols-outline
+    FocusedSymbol = { fg = minimalist.standout, style = 'bold' },
+    SymbolsOutlineConnector = { fg = minimalist.red },  -- TODO
+
+    -- lightspeed
+
+    LightspeedGreyWash = { fg = minimalist.bg_1 },
+
+    LightspeedUniqueChar     = { fg = minimalist.fg, style = 'bold' },
+    LightspeedMaskedChar     = { fg = minimalist.lightspeed_masked_char },
+    LightspeedUnlabeledMatch = { fg = minimalist.fg, style = 'bold' },
+
+    LightspeedOneCharMatch           = { fg = minimalist.lightspeed_label, style = 'bold' },
+    LightspeedLabel                  = { fg = minimalist.lightspeed_label, style = 'bold' },
+    LightspeedLabelOverlapped        = { fg = minimalist.lightspeed_label_overlapped },
+    LightspeedLabelDistant           = { fg = minimalist.lightspeed_label_distance, style = 'bold' },
+    LightspeedLabelDistantOverlapped = { fg = minimalist.lightspeed_label_distance_overlapped },
+    LightspeedShortcut               = { fg = minimalist.lightspeed_shortcut, style = 'bold' },
+    LightspeedShortcutOverlapped     = { fg = minimalist.lightspeed_shortcut, style = 'bold' },
+
+    LightspeedPendingOpArea       = { fg = minimalist.lightspeed_label },
+    LightspeedPendingChangeOpArea = { fg = minimalist.lightspeed_label, style = 'strikethrough' },
+
     -- LspTrouble
-    LspTroubleText =   { fg = minimalist.nord4_gui },
-    LspTroubleCount =  { fg = minimalist.nord9_gui, bg = minimalist.nord10_gui },
-    LspTroubleNormal = { fg = minimalist.nord4_gui, bg = minimalist.sidebar },
+    LspTroubleText =   { fg = minimalist.fg },
+    LspTroubleCount =  { fg = minimalist.bright_bg_1_2, bg = minimalist.param },
+    LspTroubleNormal = { fg = minimalist.fg, bg = minimalist.sidebar },
 
     -- Diff
-    diffAdded =     { fg = minimalist.nord14_gui },
-    diffRemoved =   { fg = minimalist.nord11_gui },
-    diffChanged =   { fg = minimalist.nord15_gui },
+    diffAdded =     { fg = minimalist.standout_more },
+    diffRemoved =   { fg = minimalist.standout },
+    diffChanged =   { fg = minimalist.standout_more },
     diffOldFile =   { fg = minimalist.yelow },
-    diffNewFile =   { fg = minimalist.nord12_gui },
-    diffFile =      { fg = minimalist.nord7_gui },
-    diffLine =      { fg = minimalist.nord3_gui },
-    diffIndexLine = { fg = minimalist.nord9_gui },
+    diffNewFile =   { fg = minimalist.diff_mode_added_line },
+    diffFile =      { fg = minimalist.bright_bg_1 },
+    diffLine =      { fg = minimalist.standout },
+    diffIndexLine = { fg = minimalist.bright_bg_1_2 },
 
     -- Neogit
-    NeogitBranch =               { fg = minimalist.nord10_gui },
-    NeogitRemote =               { fg = minimalist.nord9_gui },
-    NeogitHunkHeader =           { fg = minimalist.nord8_gui },
-    NeogitHunkHeaderHighlight =  { fg = minimalist.nord8_gui, bg = minimalist.nord1_gui },
-    NeogitDiffContextHighlight = { bg = minimalist.nord1_gui },
-    NeogitDiffDeleteHighlight =  { fg = minimalist.nord11_gui, style='reverse' },
-    NeogitDiffAddHighlight =     { fg = minimalist.nord14_gui, style='reverse' },
+    NeogitHunkHeader =           { fg = minimalist.standout_less },
+    NeogitHunkHeaderHighlight =  { fg = minimalist.standout_special_1, bg = minimalist.slightly_darker_bg },
+    NeogitDiffContextHighlight = { fg = minimalist.none, bg = minimalist.slightly_darker_bg },
+    NeogitDiffAdd          =     { fg = minimalist.git_add, bg = minimalist.fg, style='reverse' },
+    NeogitDiffAddHighlight =     { fg = minimalist.git_add, bg = minimalist.fg, style='reverse' },
+    NeogitDiffDelete          =  { fg = minimalist.git_delete, bg = minimalist.fg, style='reverse' },
+    NeogitDiffDeleteHighlight =  { fg = minimalist.git_delete, bg = minimalist.fg, style='reverse' },
+    NeogitBranch =               { fg = minimalist.param },
+    NeogitRemote =               { fg = minimalist.bright_bg_1_2 },
+
+    NeogitStagedChanges   = { fg = minimalist.bright_bg_1_2, style = 'bold,italic,underline' },
+    NeogitUnstagedChanges = { fg = minimalist.standout_special_1, style = 'bold,italic,underline' },
+    -- NeogitStash =
+
+    NeogitNotificationInfo    = { fg = minimalist.standout_less },
+    NeogitNotificationWarning = { fg = minimalist.standout_more },
+    NeogitNotificationError   = { fg = minimalist.standout },
 
     -- GitGutter
-    GitGutterAdd =    { fg = minimalist.nord14_gui }, -- diff mode: Added line |diff.txt|
-    GitGutterChange = { fg = minimalist.nord15_gui }, -- diff mode: Changed line |diff.txt|
-    GitGutterDelete = { fg = minimalist.nord11_gui }, -- diff mode: Deleted line |diff.txt|
+    GitGutterAdd =    { fg = minimalist.standout_more }, -- diff mode: Added line |diff.txt|
+    GitGutterChange = { fg = minimalist.standout_more }, -- diff mode: Changed line |diff.txt|
+    GitGutterDelete = { fg = minimalist.standout }, -- diff mode: Deleted line |diff.txt|
 
     -- GitSigns
-    GitSignsAdd =      { fg = minimalist.nord14_gui }, -- diff mode: Added line |diff.txt|
-    GitSignsAddNr =    { fg = minimalist.nord14_gui }, -- diff mode: Added line |diff.txt|
-    GitSignsAddLn =    { fg = minimalist.nord14_gui }, -- diff mode: Added line |diff.txt|
-    GitSignsChange =   { fg = minimalist.nord15_gui }, -- diff mode: Changed line |diff.txt|
-    GitSignsChangeNr = { fg = minimalist.nord15_gui }, -- diff mode: Changed line |diff.txt|
-    GitSignsChangeLn = { fg = minimalist.nord15_gui }, -- diff mode: Changed line |diff.txt|
-    GitSignsDelete =   { fg = minimalist.nord11_gui }, -- diff mode: Deleted line |diff.txt|
-    GitSignsDeleteNr = { fg = minimalist.nord11_gui }, -- diff mode: Deleted line |diff.txt|
-    GitSignsDeleteLn = { fg = minimalist.nord11_gui }, -- diff mode: Deleted line |diff.txt|
+    GitSignsChange =   { fg = minimalist.git_gutter_change }, -- diff mode: Changed line |diff.txt|
+    GitSignsChangeNr = { fg = minimalist.bg_1, bg = minimalist.standout_special_2 }, -- diff mode: Changed line |diff.txt|
+    GitSignsChangeLn = { bg = minimalist.standout_special_2 }, -- diff mode: Changed line |diff.txt|
+    GitSignsAdd =      { fg = minimalist.git_gutter_add }, -- diff mode: Added line |diff.txt|
+    GitSignsAddNr =    { fg = minimalist.bg_1, bg = minimalist.git_add }, -- diff mode: Added line |diff.txt|
+    GitSignsAddLn =    { bg = minimalist.git_add }, -- diff mode: Added line |diff.txt|
+    GitSignsDelete =   { fg = minimalist.git_gutter_delete }, -- diff mode: Deleted line |diff.txt|
+    GitSignsDeleteNr = { fg = minimalist.bg_1, bg = minimalist.git_delete }, -- diff mode: Deleted line |diff.txt|
+    GitSignsDeleteLn = { bg = minimalist.git_delete }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopePromptBorder =   { fg = minimalist.nord8_gui },
-    TelescopeResultsBorder =  { fg = minimalist.nord9_gui },
-    TelescopePreviewBorder =  { fg = minimalist.nord14_gui },
-    TelescopeSelectionCaret = { fg = minimalist.nord9_gui },
-    TelescopeSelection =      { fg = minimalist.nord9_gui },
-    TelescopeMatching =       { fg = minimalist.nord8_gui },
-    TelescopeNormal =         { fg = minimalist.nord4_gui, bg = minimalist.float },
+    TelescopeNormal =         { fg = minimalist.fg, bg = minimalist.bg },
+    TelescopeSelection =      { fg = minimalist.standout },
+    TelescopeMatching =       { fg = minimalist.standout_more },
+    TelescopePromptBorder =   { fg = minimalist.dark_bg_1 },
+    TelescopeResultsBorder =  { fg = minimalist.dark_bg_1 },
+    TelescopePreviewBorder =  { fg = minimalist.dark_bg_1 },
+    TelescopeSelectionCaret = { fg = minimalist.bright_bg_1_2 },
 
     -- NvimTree
-    NvimTreeRootFolder =        { fg = minimalist.nord7_gui, style = "bold" },
-    NvimTreeGitDirty =          { fg = minimalist.nord15_gui },
-    NvimTreeGitNew =            { fg = minimalist.nord14_gui },
-    NvimTreeImageFile =         { fg = minimalist.nord15_gui },
-    NvimTreeExecFile =          { fg = minimalist.nord14_gui },
-    NvimTreeSpecialFile =       { fg = minimalist.nord9_gui , style = "underline" },
-    NvimTreeFolderName=         { fg = minimalist.nord10_gui },
-    NvimTreeEmptyFolderName=    { fg = minimalist.nord1_gui },
-    NvimTreeFolderIcon=         { fg = minimalist.nord4_gui },
-    NvimTreeIndentMarker =      { fg  = minimalist.nord1_gui },
-    LspDiagnosticsError =       { fg = minimalist.nord11_gui },
-    LspDiagnosticsWarning =     { fg = minimalist.nord15_gui },
-    LspDiagnosticsInformation = { fg = minimalist.nord10_gui },
-    LspDiagnosticsHint =        { fg = minimalist.nord9_gui },
+    NvimTreeRootFolder =        { fg = minimalist.standout_special_1 },
+    NvimTreeGitDirty =          { fg = minimalist.standout_more },
+    NvimTreeGitNew =            { fg = minimalist.standout_more },
+    NvimTreeImageFile =         { fg = minimalist.standout_more },
+    NvimTreeExecFile =          { fg = minimalist.standout_more },
+    NvimTreeSpecialFile =       { fg = minimalist.bright_bg_1_2 , style = "underline" },
+    NvimTreeFolderName=         { fg = minimalist.standout_less },
+    NvimTreeEmptyFolderName=    { fg = minimalist.dark_bg_2 },
+    NvimTreeFolderIcon=         { fg = '#8AA398' },
+    NvimTreeIndentMarker =      { fg = '#6E9082' },
+    LspDiagnosticsError =       { fg = minimalist.standout },
+    LspDiagnosticsWarning =     { fg = minimalist.standout_more },
+    LspDiagnosticsInformation = { fg = minimalist.param },
+    LspDiagnosticsHint =        { fg = minimalist.bright_bg_1_2 },
 
     -- WhichKey
-    WhichKey =          { fg = minimalist.nord4_gui , style = 'bold'},
-    WhichKeyGroup =     { fg = minimalist.nord4_gui },
-    WhichKeyDesc =      { fg = minimalist.nord7_gui, style = 'italic' },
-    WhichKeySeperator = { fg = minimalist.nord4_gui },
-    WhichKeyFloating =  { bg = minimalist.float },
-    WhichKeyFloat =     { bg = minimalist.float },
+    WhichKey =          { fg = minimalist.fg , style = 'bold'},
+    WhichKeyGroup =     { fg = minimalist.fg },
+    WhichKeyDesc =      { fg = minimalist.bright_bg_1, style = 'italic' },
+    WhichKeySeperator = { fg = minimalist.fg },
+    WhichKeyFloating =  { bg = minimalist.bg },
+    WhichKeyFloat =     { bg = minimalist.bg },
 
-    -- LspSaga
-    DiagnosticError =            { fg = minimalist.nord11_gui },
-    DiagnosticWarning =          { fg = minimalist.nord15_gui },
-    DiagnosticInformation =      { fg = minimalist.nord10_gui },
-    DiagnosticHint =             { fg = minimalist.nord9_gui },
-    DiagnosticTruncateLine =     { fg = minimalist.nord4_gui },
-    LspFloatWinNormal =          { bg = minimalist.nord2_gui },
-    LspFloatWinBorder =          { fg = minimalist.nord9_gui },
-    LspSagaBorderTitle =         { fg = minimalist.nord8_gui },
-    LspSagaHoverBorder =         { fg = minimalist.nord10_gui },
-    LspSagaRenameBorder =        { fg = minimalist.nord14_gui },
-    LspSagaDefPreviewBorder =    { fg = minimalist.nord14_gui },
-    LspSagaCodeActionBorder =    { fg = minimalist.nord7_gui },
-    LspSagaFinderSelection =     { fg = minimalist.nord14_gui },
-    LspSagaCodeActionTitle =     { fg = minimalist.nord10_gui },
-    LspSagaCodeActionContent =   { fg = minimalist.nord9_gui },
-    LspSagaSignatureHelpBorder = { fg = minimalist.nord13_gui },
-    ReferencesCount =            { fg = minimalist.nord9_gui },
-    DefinitionCount =            { fg = minimalist.nord9_gui },
-    DefinitionIcon =             { fg = minimalist.nord7_gui },
-    ReferencesIcon =             { fg = minimalist.nord7_gui },
-    TargetWord =                 { fg = minimalist.nord8_gui },
+    -- Compe
+    CmpDocumentation       = { fg = minimalist.fg, bg = minimalist.bg },
+    CmpDocumentationBorder = { fg = minimalist.dark_bg_1, bg = minimalist.bg },
 
-        -- Sneak
-    Sneak =      { fg = minimalist.nord0_gui, bg = minimalist.nord4_gui },
-    SneakScope = { bg = minimalist.nord1_gui },
+    -- LspSaga: TODO https://github.com/glepnir/lspsaga.nvim/pull/198/files
+
+    LspFloatWinNormal        = { bg = minimalist.bg },
+    LspSagaFinderSelection   = { fg = minimalist.standout },
+    LspSagaCodeActionContent = { fg = minimalist.param },
+    DefinitionIcon           = { fg = minimalist.bright_bg_1 },
+    ReferencesIcon           = { fg = minimalist.bright_bg_1 },
+    TargetWord               = { fg = minimalist.standout_less },
+
+    LspSagaBorderTitle = { fg = minimalist.standout_less },
+
+    DefinitionPreviewTitle = { fg = minimalist.bright_bg_1_2 },
+    LspSagaCodeActionTitle = { fg = minimalist.bright_bg_1_2 },
+    LspSagaCodeActionTitle = { fg = minimalist.bright_bg_1_2 },
+    LspSagaDiagnosticHeader = { fg = minimalist.bright_bg_1_2 },
+
+    ReferencesCount = { fg = minimalist.bright_bg_1_2 },
+    DefinitionCount = { fg = minimalist.bright_bg_1_2 },
+
+    LspFloatWinBorder          = { fg = minimalist.dark_bg_1 },
+    LspSagaSignatureHelpBorder = { fg = minimalist.dark_bg_1 },
+    LspSagaHoverBorder         = { fg = minimalist.dark_bg_1 },
+    LspSagaRenameBorder        = { fg = minimalist.dark_bg_1 },
+    LspSagaLspFinderBorder     = { fg = minimalist.dark_bg_1 },
+    LspSagaDefPreviewBorder    = { fg = minimalist.dark_bg_1 },
+    LspSagaCodeActionBorder    = { fg = minimalist.dark_bg_1 },
+    LspSagaDiagnosticBorder    = { fg = minimalist.dark_bg_1},
+
+    LspSagaDiagnosticTruncateLine = {fg = minimalist.dark_bg_1 },
+    ProviderTruncateLine          = {fg = minimalist.dark_bg_1},
+    LspSagaShTruncateLine         = {fg = minimalist.dark_bg_1},
+    LspSagaDocTruncateLine        = {fg = minimalist.dark_bg_1},
+    LineDiagTuncateLine           = {fg = minimalist.dark_bg_1},
+    LspSagaCodeActionTruncateLine = {fg = minimalist.dark_bg_1},
+
+
+    -- Sneak
+    -- Sneak =      { fg = minimalist.bg, bg = minimalist.fg },
+    -- SneakScope = { bg = minimalist.dark_bg_2 },
 
     -- Indent Blankline
-    IndentBlanklineChar =        { fg = minimalist.nord3_gui },
-    IndentBlanklineContextChar = { fg = minimalist.nord3_gui },
+    IndentBlanklineChar =        { fg = minimalist.standout },
+    IndentBlanklineContextChar = { fg = minimalist.standout },
 
     -- Illuminate
-    illuminatedWord =    { bg = minimalist.nord3_gui },
-    illuminatedCurWord = { bg = minimalist.nord3_gui },
+    illuminatedWord =    { bg = minimalist.standout },
+    illuminatedCurWord = { bg = minimalist.standout },
 
     -- nvim-dap
-    DapBreakpoint = { fg = minimalist.nord14_gui},
-    DapStopped =    { fg = minimalist.nord15_gui},
+    -- DapBreakpoint = { fg = minimalist.standout_more},
+    -- DapStopped =    { fg = minimalist.standout_more},
 
     -- Hop
-    HopNextKey =   { fg = minimalist.nord4_gui, style = 'bold' },
-    HopNextKey1 =  { fg = minimalist.nord8_gui, style = 'bold' },
-    HopNextKey2 =  { fg = minimalist.nord4_gui},
-    HopUnmatched = { fg = minimalist.nord3_gui },
+    -- HopNextKey =   { fg = minimalist.fg, style = 'bold' },
+    -- HopNextKey1 =  { fg = minimalist.standout_less, style = 'bold' },
+    -- HopNextKey2 =  { fg = minimalist.fg},
+    -- HopUnmatched = { fg = minimalist.standout },
 
     -- Fern
-    FernBranchText = { fg = minimalist.nord3_gui_bright},
+    -- FernBranchText = { fg = minimalist.bg_2},
 
-    -- nvim-ts-rainbow
-    rainbowcol1 = { fg = minimalist.nord15_gui },
-    rainbowcol2 = { fg = minimalist.nord14_gui },
-    rainbowcol3 = { fg = minimalist.nord13_gui },
-    rainbowcol4 = { fg = minimalist.nord12_gui },
-    rainbowcol5 = { fg = minimalist.nord11_gui },
-    rainbowcol6 = { fg = minimalist.nord10_gui },
-    rainbowcol7 = { fg = minimalist.nord9_gui },
+    -- DevIcon
+    DevIconR         = { fg = minimalist.DevIconR },
+    DevIconRmd       = { fg = minimalist.DevIconRmd },
+    DevIconMarkdown  = { fg = minimalist.DevIconMarkdown },
+    DevIconJulia     = { fg = minimalist.DevIconJulia },  -- TODO Not working
+    DevIconVim       = { fg = minimalist.DevIconVim },
+    DevIconGitIgnore = { fg = minimalist.DevIconGitIgnore }
   }
   -- Options:
 
   -- Disable nvim-tree background
   if vim.g.minimalist_disable_background then
-    plugins.NvimTreeNormal = { fg = minimalist.nord4_gui, bg = minimalist.none }
+    plugins.NvimTreeNormal = { fg = minimalist.fg, bg = minimalist.none }
   else
-    plugins.NvimTreeNormal = { fg = minimalist.nord4_gui, bg = minimalist.sidebar }
+    plugins.NvimTreeNormal = { fg = minimalist.fg, bg = minimalist.sidebar }
   end
 
   if vim.g.minimalist_enable_sidebar_background then
-    plugins.NvimTreeNormal = { fg = minimalist.nord4_gui, bg = minimalist.sidebar }
+    plugins.NvimTreeNormal = { fg = minimalist.fg, bg = minimalist.sidebar }
   else
-    plugins.NvimTreeNormal = { fg = minimalist.nord4_gui, bg = minimalist.none }
+    plugins.NvimTreeNormal = { fg = minimalist.fg, bg = minimalist.none }
   end
 
   return plugins
