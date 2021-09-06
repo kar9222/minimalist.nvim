@@ -64,7 +64,7 @@ theme.loadSyntax = function ()
     juliaFunctionName = { fg = minimalist.standout },
     juliaMacroDelimiter = { fg = minimalist.standout_special_1 },
     juliaMyMacro = { fg = minimalist.standout_less },
-    juliaConditional = { fg = minimalist.standout },
+    -- juliaConditional = { fg = minimalist.standout },  -- TODO No need?
     juliaException = { fg = minimalist.standout },
     juliaFunctionCall = { fg = minimalist.standout_less },
     juliaParDelim = { fg = minimalist.bg_1 },
@@ -93,24 +93,29 @@ theme.loadSyntax = function ()
     markdownH1Delimiter = { fg = minimalist.standout_less },
     markdownH2Delimiter = { fg = minimalist.standout },
     markdownH3Delimiter = { fg = minimalist.standout_more },
+
+    -- Lua
+    luaFunction  = { fg = minimalist.standout },
+    luaStatement = { fg = minimalist.standout },  -- TODO Override `Statement`. R'syntax is wrong?
+    luaTable     = { fg = minimalist.bg_1 },
   }
 
   	-- Italic comments
 	if vim.g.minimalist_italic == true then
-		syntax.Conditional =		{ fg = minimalist.bright_bg_1_2, bg = minimalist.none, style = 'italic' } -- italic if, then, else, endif, switch, etc.
+		syntax.Conditional =		{ fg = minimalist.standout, bg = minimalist.none, style = 'italic' } -- italic if, then, else, endif, switch, etc.
 		syntax.Keyword =			{ fg = minimalist.standout_special_3, bg = minimalist.none, style = 'italic' } -- italic for, do, while, etc.
 		syntax.Repeat =				{ fg = minimalist.standout, bg = minimalist.none, style = 'italic' } -- italic any other keyword
 		syntax.Comment =		{ fg = minimalist.bg_2, bg = minimalist.none, style = 'italic' } -- italic comments
 		syntax.Function =		{ fg = minimalist.standout_less, bg = minimalist.none, style = 'italic' } -- italic funtion names
-		syntax.Identifier =		{ fg = minimalist.bright_bg_1_2, bg = minimalist.none, style = 'italic' }; -- any variable name
+		syntax.Identifier =		{ fg = minimalist.standout_less, bg = minimalist.none, style = 'italic' }; -- any variable name
     syntax.String = { fg = minimalist.standout_more, bg = minimalist.none, style= 'italic' } -- any string
 	else
 		syntax.Comment =		{fg = minimalist.bg_2} -- normal comments
-		syntax.Conditional =		{ fg = minimalist.bright_bg_1_2 } -- normal if, then, else, endif, switch, etc.
+		syntax.Conditional =		{ fg = minimalist.standout } -- normal if, then, else, endif, switch, etc.
 		syntax.Keyword =			{ fg = minimalist.standout_special_3 } -- normal for, do, while, etc.
 		syntax.Repeat =				{ fg = minimalist.standout } -- normal any other keyword
 		syntax.Function =		{ fg = minimalist.standout_less} -- normal function names
-		syntax.Identifier =		{ fg = minimalist.bright_bg_1_2}; -- any variable name
+		syntax.Identifier =		{ fg = minimalist.standout_less}; -- any variable name
     syntax.String = { fg = minimalist.standout_more } -- any string
 	end
 
