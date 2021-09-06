@@ -130,6 +130,7 @@ theme.loadEditor = function ()
   local editor = {
     MsgArea =          { fg = minimalist.fg },  -- Command line
     NormalFloat =      { fg = minimalist.fg, bg = minimalist.bg }, -- normal text and background color
+    FloatBorder =      { fg = minimalist.dark_bg_1, bg = minimalist.bg },  -- TODO Need?
     ColorColumn =      { fg = minimalist.none, bg = minimalist.dark_bg_2 }, --  used for the columns set with 'colorcolumn'
     Conceal =          { fg = minimalist.dark_bg_2 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor =           { fg = minimalist.cursor_fg, bg = minimalist.cursor_bg, style = 'reverse' }, -- the character under the cursor
