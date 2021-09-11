@@ -27,6 +27,8 @@ local minimalist = {
   standout_special_2_2 = "#2e6676", -- Find match IncSearch, etc
   standout_special_3 = "#C7C7BF",   -- Keyword, etc
 
+  fold_bg = '#31343C',
+
   lightspeed_label = '#f02077',
   lightspeed_label_overlapped = '#e01067',
   lightspeed_shortcut = '#99ddff',

@@ -13,12 +13,12 @@ theme.loadSyntax = function ()
     Number =         { fg = minimalist.standout_more }, -- a number constant: 5
     Boolean =        { fg = minimalist.standout_more }, -- a boolean constant: TRUE, false
     Float =          { fg = minimalist.standout_more }, -- a floating point constant: 2.3e10
-    Statement =      { fg = minimalist.bright_bg_1_2 }, -- any statement
+    Statement =      { fg = minimalist.standout_less }, -- any statement
     Label =          { fg = minimalist.bright_bg_1_2 }, -- case, default, etc.
     Operator =       { fg = minimalist.bright_bg_1_2 }, -- sizeof", "+", "*", etc.
     Exception =      { fg = minimalist.bright_bg_1_2 }, -- try, catch, throw
     PreProc =        { fg = minimalist.standout }, -- generic Preprocessor
-    Include =        { fg = minimalist.bright_bg_1_2 }, -- preprocessor #include
+    Include =        { fg = minimalist.standout_special_1 }, -- preprocessor #include
     Define =         { fg = minimalist.bright_bg_1_2 }, -- preprocessor #define
     Macro =          { fg = minimalist.bright_bg_1_2 }, -- same as Define
     Typedef =        { fg = minimalist.bright_bg_1_2 }, -- A typedef
@@ -31,15 +31,19 @@ theme.loadSyntax = function ()
     Debug =          { fg = minimalist.standout }, -- debugging statements
     Underlined =     { fg = minimalist.standout_more, bg = minimalist.none, style = 'underline' }, -- text that stands out, HTML links
     Ignore =         { fg = minimalist.dark_bg_2 }, -- left blank, hidden
-    Error =          { fg = minimalist.standout_more, bg = minimalist.none, style = 'bold,underline' }, -- any erroneous construct
+    Error =          { fg = minimalist.bg, bg = '#FFA1AA', style = 'bold' }, -- any erroneous construct TODO
     Todo =           { fg = minimalist.bg_1, bg = minimalist.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    Conceal =        { fg = minimalist.none, bg = minimalist.bg },
 
     -- Help docs
-    helpCommand = { fg = minimalist.standout_less },
+    helpHeadLine       = { fg = minimalist.bright_bg_1_2, style = 'bold' },
+    helpCommand        = { fg = minimalist.standout_less },
+    helpHyperTextEntry = { fg = minimalist.standout },
+    helpHyperTextJump  = { fg = minimalist.standout_more },
+    helpSectionDelim   = { fg = minimalist.bg_2 },
 
     -- R syntax
 
+    rNamespace           = { fg = minimalist.standout_less, style = 'bold' },
     rType                = { fg = minimalist.standout_less },
     rFunctionName        = { fg = minimalist.standout },
     rKeywordFunction     = { fg = minimalist.bright_bg_1_2, style = 'bold' },
@@ -56,14 +60,19 @@ theme.loadSyntax = function ()
 
     -- Julia syntax
 
+    juliaCommentDelim        = { fg = minimalist.dark_bg_1 },
+    juliaCommentKey          = { fg = minimalist.dark_bg_1 },
+    juliaCodeSection         = { fg = minimalist.standout_special_1, style = 'bold' },
+    juliaCodeSectionEndDelim = { fg = minimalist.bg_2 },
+
     -- Literal `function`, `macro`, `struct`, etc
     juliaBlKeywordStart_1 = { fg = minimalist.bright_bg_1_2, style = 'bold' },
     juliaBlKeywordStart_2 = { fg = minimalist.standout },
     juliaBlKeywordEnd = { fg = minimalist.bg_2 },  -- TODO Previously, bg_1 is used
 
+    juliaKeyword = { fg = minimalist.standout_special_1 },
     juliaFunctionName = { fg = minimalist.standout },
-    juliaMacroDelimiter = { fg = minimalist.standout_special_1 },
-    juliaMyMacro = { fg = minimalist.standout_less },
+    juliaMacro = { fg = minimalist.standout_less },
     -- juliaConditional = { fg = minimalist.standout },  -- TODO No need?
     juliaException = { fg = minimalist.standout },
     juliaFunctionCall = { fg = minimalist.standout_less },
@@ -81,29 +90,67 @@ theme.loadSyntax = function ()
     juliacocCode = { fg = minimalist.fg },
     helpExample = { fg = minimalist.standout_less },
 
-    htmlLink = { fg = minimalist.standout_more, style = "underline" },
-    htmlH1 =   { fg = minimalist.standout_less, style = "bold" },
-    htmlH2 =   { fg = minimalist.standout, style = "bold" },
-    htmlH3 =   { fg = minimalist.standout_more, style = "bold" },
-    htmlH4 =   { fg = minimalist.standout_more, style = "bold" },
-    htmlH5 =   { fg = minimalist.bright_bg_1_2, style = "bold" },
-    markdownH1 = { fg = minimalist.standout_less, style = "bold" },
-    markdownH2 = { fg = minimalist.standout, style = "bold" },
-    markdownH3 = { fg = minimalist.standout_more, style = "bold" },
-    markdownH1Delimiter = { fg = minimalist.standout_less },
-    markdownH2Delimiter = { fg = minimalist.standout },
-    markdownH3Delimiter = { fg = minimalist.standout_more },
+    -- Vim
+    vimFunc       = { fg = minimalist.standout },  -- Custom hl group `function`
+    vimKeywordEnd = { fg = minimalist.bg_1 },  -- end, endfunction, endif, endfu, etc
+    vimNotFunc    = { fg = minimalist.standout },  -- if, while, return, etc
+    vimOption     = { fg = minimalist.standout_less },
+    vimSynType    = { fg = minimalist.standout_less },
+    vimGroupName  = { fg = minimalist.fg },
+    vimSynReg     = { fg = minimalist.standout_less },
+    vimGroup      = { fg = minimalist.fg },
 
     -- Lua
-    luaFunction  = { fg = minimalist.standout },
-    luaStatement = { fg = minimalist.standout },  -- TODO Override `Statement`. R'syntax is wrong?
-    luaTable     = { fg = minimalist.bg_1 },
+    luaFunction   = { fg = minimalist.standout },
+    luaStatement  = { fg = minimalist.standout },  -- TODO Override `Statement`. R'syntax is wrong?
+    luaTable      = { fg = minimalist.bg_1 },
+    luaKeywordEnd = { fg = minimalist.bg_1 },
+
+
+    -- Pandoc
+    pandocAtxStart  = { fg = minimalist.standout, style = "bold" },
+    pandocAtxHeader = { fg = minimalist.standout, style = "bold" },
+    pandocDelimitedCodeBlockStart = { fg = minimalist.bg_1 },
+    pandocDelimitedCodeBlockLanguage = { fg = minimalist.bg_1 },
+    pandocStrong = { fg = minimalist.standout_more, style = 'bold' },
+    pandocEmphasis = { fg = minimalist.standout_more, style = 'italic' },  -- Italicized text
+    pandocNoFormatted = { fg = minimalist.standout_less },  -- Code block
+    pandocReferenceDefinition = { fg = minimalist.bright_bg_1, style = 'italic' },  -- Concealed link title. Use brighter color because it's concealed
+
+
+    -- Markdown. NOTE This also affects other filetype e.g. R
+
+    -- mkdHeading =   { fg = minimalist.standout, style = "bold" },
+    -- htmlH1 =   { fg = minimalist.standout, style = "bold" },
+    -- htmlH2 =   { fg = minimalist.standout, style = "bold" },
+    -- htmlH3 =   { fg = minimalist.standout, style = "bold" },
+    -- htmlH4 =   { fg = minimalist.standout, style = "bold" },
+    -- htmlH5 =   { fg = minimalist.standout, style = "bold" },
+    -- htmlH6 =   { fg = minimalist.standout, style = "bold" },
+    -- markdownH1 = { fg = minimalist.standout_less, style = "bold" },
+    -- markdownH2 = { fg = minimalist.standout, style = "bold" },
+    -- markdownH3 = { fg = minimalist.standout_more, style = "bold" },
+    -- markdownH1Delimiter = { fg = minimalist.standout_less },
+    -- markdownH2Delimiter = { fg = minimalist.standout },
+    -- markdownH3Delimiter = { fg = minimalist.standout_more },
+
+    -- mkdBold = { fg = minimalist.dark_bg_1 },
+    -- htmlBold = { fg = minimalist.standout_more, style = 'bold' },
+    -- mkdItalic = { fg = minimalist.dark_bg_1 },
+    -- htmlItalic = { fg = minimalist.standout_more, style = 'italic' },
+
+    -- mkdDelimiter = { fg = minimalist.bg_1 },
+    -- mkdCodeDelimiter = { fg = minimalist.bg_1 },
+    -- mkdCode = { fg = minimalist.standout_less },
+    -- htmlLink = { fg = minimalist.dark_standout_less_2, style = "italic" },
+    -- mkdUrl = { fg = minimalist.bg_1, style = 'italic' },
+
   }
 
   	-- Italic comments
 	if vim.g.minimalist_italic == true then
 		syntax.Conditional =		{ fg = minimalist.standout, bg = minimalist.none, style = 'italic' } -- italic if, then, else, endif, switch, etc.
-		syntax.Keyword =			{ fg = minimalist.standout_special_3, bg = minimalist.none, style = 'italic' } -- italic for, do, while, etc.
+		syntax.Keyword =			{ fg = minimalist.standout, bg = minimalist.none, style = 'italic' } -- italic for, do, while, etc.
 		syntax.Repeat =				{ fg = minimalist.standout, bg = minimalist.none, style = 'italic' } -- italic any other keyword
 		syntax.Comment =		{ fg = minimalist.bg_2, bg = minimalist.none, style = 'italic' } -- italic comments
 		syntax.Function =		{ fg = minimalist.standout_less, bg = minimalist.none, style = 'italic' } -- italic funtion names
@@ -112,7 +159,7 @@ theme.loadSyntax = function ()
 	else
 		syntax.Comment =		{fg = minimalist.bg_2} -- normal comments
 		syntax.Conditional =		{ fg = minimalist.standout } -- normal if, then, else, endif, switch, etc.
-		syntax.Keyword =			{ fg = minimalist.standout_special_3 } -- normal for, do, while, etc.
+		syntax.Keyword =			{ fg = minimalist.standout } -- normal for, do, while, etc.
 		syntax.Repeat =				{ fg = minimalist.standout } -- normal any other keyword
 		syntax.Function =		{ fg = minimalist.standout_less} -- normal function names
 		syntax.Identifier =		{ fg = minimalist.standout_less}; -- any variable name
@@ -132,7 +179,7 @@ theme.loadEditor = function ()
     NormalFloat =      { fg = minimalist.fg, bg = minimalist.bg }, -- normal text and background color
     FloatBorder =      { fg = minimalist.dark_bg_1, bg = minimalist.bg },  -- TODO Need?
     ColorColumn =      { fg = minimalist.none, bg = minimalist.dark_bg_2 }, --  used for the columns set with 'colorcolumn'
-    Conceal =          { fg = minimalist.dark_bg_2 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+    Conceal =          { fg = minimalist.bg_1 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor =           { fg = minimalist.cursor_fg, bg = minimalist.cursor_bg, style = 'reverse' }, -- the character under the cursor
     CursorIM =         { fg = minimalist.cursor_fg, bg = minimalist.cursor_bg, style = 'reverse' }, -- the character under the cursor
     TermCursor =       { fg = minimalist.cursor_fg, bg = minimalist.cursor_bg, style = 'reverse' }, -- the character under the cursor
@@ -142,16 +189,15 @@ theme.loadEditor = function ()
     DiffChange =       { fg = minimalist.diff_mode_added_line, bg = minimalist.none, style = 'reverse' }, --  diff mode: Changed line
     DiffDelete =       { fg = minimalist.standout, bg = minimalist.none, style = 'reverse' }, -- diff mode: Deleted line
     DiffText =         { fg = minimalist.standout_more, bg = minimalist.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
-    EndOfBuffer =      { fg = minimalist.dark_bg_2 },
+    EndOfBuffer =      { fg = minimalist.bg },  -- Filler lines `~`
     ErrorMsg =         { fg = minimalist.none },
-    Folded =           { fg = minimalist.dark_bg_2, minimalist.none, style = 'italic' },
+    Folded =           { fg = minimalist.standout_less, bg = minimalist.fold_bg  },
     FoldColumn =       { fg = minimalist.bright_bg_1 },
     LineNr =           { fg = minimalist.dark_bg_1 },
-    CursorLineNr =     { fg = minimalist.fg },
-    MatchParen =       { fg = minimalist.standout, bg = minimalist.none, style = 'bold' },
+    MatchParen =       { fg = minimalist.standout, bg = minimalist.none },
     ModeMsg =          { fg = minimalist.standout_more },
     MoreMsg =          { fg = minimalist.standout_more },
-    NonText =          { fg = minimalist.dark_bg_2 },
+    NonText =          { fg = minimalist.standout_special_1 },  -- TODO Telescope's status text. Source is at pickers.lua: virt_text = { { text, "NonText" } }
     Pmenu =            { fg = minimalist.fg, bg = minimalist.bg },
     PmenuSel =         { fg = minimalist.standout, bg = minimalist.slightly_lighter_bg },
     PmenuSbar =        {                      bg = minimalist.bg },
@@ -179,7 +225,8 @@ theme.loadEditor = function ()
     WarningMsg =       { fg = minimalist.standout_more },
     WildMenu =         { fg = minimalist.diff_mode_added_line, bg = minimalist.none, style = 'bold' },
     CursorColumn =     { fg = minimalist.none, bg = minimalist.cursorlinefg },
-    CursorLine =       { fg = minimalist.none, bg = minimalist.cursorlinefg },
+    CursorLineNr =     { fg = minimalist.dark_bg_1, bg = minimalist.slightly_darker_bg },  -- 'Disable' fg by setting it to the same as LineNr
+    CursorLine =       { fg = minimalist.standout, bg = minimalist.slightly_darker_bg },
     ToolbarLine =      { fg = minimalist.fg, bg = minimalist.dark_bg_2 },
     ToolbarButton =    { fg = minimalist.fg, bg = minimalist.none, style = 'bold' },
     NormalMode =       { fg = minimalist.fg, bg = minimalist.none, style = 'reverse' },
@@ -415,6 +462,7 @@ theme.loadPlugins = function()
     diffIndexLine = { fg = minimalist.bright_bg_1_2 },
 
     -- Neogit
+
     NeogitHunkHeader =           { fg = minimalist.standout_less },
     NeogitHunkHeaderHighlight =  { fg = minimalist.standout_special_1, bg = minimalist.slightly_darker_bg },
     NeogitDiffContextHighlight = { fg = minimalist.none, bg = minimalist.slightly_darker_bg },
@@ -428,6 +476,9 @@ theme.loadPlugins = function()
     NeogitStagedChanges   = { fg = minimalist.bright_bg_1_2, style = 'bold,italic,underline' },
     NeogitUnstagedChanges = { fg = minimalist.standout_special_1, style = 'bold,italic,underline' },
     -- NeogitStash =
+
+    NeogitCommitViewHeader = { fg = minimalist.standout_special_1, bg = minimalist.slightly_lighter_bg },
+    NeogitFilePath = { fg = minimalist.standout_more },
 
     NeogitNotificationInfo    = { fg = minimalist.standout_less },
     NeogitNotificationWarning = { fg = minimalist.standout_more },
@@ -450,13 +501,25 @@ theme.loadPlugins = function()
     GitSignsDeleteLn = { bg = minimalist.git_delete }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopeNormal =         { fg = minimalist.fg, bg = minimalist.bg },
-    TelescopeSelection =      { fg = minimalist.standout },
-    TelescopeMatching =       { fg = minimalist.standout_more },
-    TelescopePromptBorder =   { fg = minimalist.dark_bg_1 },
-    TelescopeResultsBorder =  { fg = minimalist.dark_bg_1 },
-    TelescopePreviewBorder =  { fg = minimalist.dark_bg_1 },
+
+    TelescopeNormal         = { fg = minimalist.fg, bg = minimalist.bg },
+    TelescopeSelection      = { fg = minimalist.standout },
+    TelescopeMatching       = { fg = minimalist.standout_more },
+    TelescopePromptPrefix   = { fg = minimalist.dark_bg_1 },
     TelescopeSelectionCaret = { fg = minimalist.bright_bg_1_2 },
+    TelescopeBorder         = { fg = minimalist.dark_bg_1 },
+    TelescopePromptBorder   = { fg = minimalist.dark_bg_1 },
+    TelescopeResultsBorder  = { fg = minimalist.dark_bg_1 },
+    TelescopePreviewBorder  = { fg = minimalist.dark_bg_1 },
+
+    TelescopeResultsClass    = { fg = minimalist.standout_special_1 },
+    TelescopeResultsConstant = { fg = minimalist.bright_bg_1 },
+    TelescopeResultsField    = { fg = minimalist.bright_bg_1 },
+    TelescopeResultsFunction = { fg = minimalist.standout_less },
+    TelescopeResultsMethod   = { fg = minimalist.standout_less },
+    TelescopeResultsOperator = { fg = minimalist.standout_more },
+    TelescopeResultsStruct   = { fg = minimalist.standout_special_1 },
+    TelescopeResultsVariable = { fg = minimalist.standout_special_1 },
 
     -- NvimTree
     NvimTreeRootFolder =        { fg = minimalist.standout_special_1 },
