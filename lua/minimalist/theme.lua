@@ -491,8 +491,8 @@ theme.loadPlugins = function()
 
     -- GitSigns
     GitSignsChange =   { fg = minimalist.git_gutter_change }, -- diff mode: Changed line |diff.txt|
-    GitSignsChangeNr = { fg = minimalist.bg_1, bg = minimalist.standout_special_2 }, -- diff mode: Changed line |diff.txt|
-    GitSignsChangeLn = { bg = minimalist.standout_special_2 }, -- diff mode: Changed line |diff.txt|
+    GitSignsChangeNr = { fg = minimalist.bg_1, bg = minimalist.git_change }, -- diff mode: Changed line |diff.txt|
+    GitSignsChangeLn = { bg = minimalist.git_change }, -- diff mode: Changed line |diff.txt|
     GitSignsAdd =      { fg = minimalist.git_gutter_add }, -- diff mode: Added line |diff.txt|
     GitSignsAddNr =    { fg = minimalist.bg_1, bg = minimalist.git_add }, -- diff mode: Added line |diff.txt|
     GitSignsAddLn =    { bg = minimalist.git_add }, -- diff mode: Added line |diff.txt|
