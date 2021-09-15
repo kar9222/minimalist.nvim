@@ -463,15 +463,15 @@ theme.loadPlugins = function()
 
     -- Neogit
 
-    NeogitHunkHeader =           { fg = minimalist.standout_less },
-    NeogitHunkHeaderHighlight =  { fg = minimalist.standout_special_1, bg = minimalist.slightly_darker_bg },
+    NeogitHunkHeader           = { fg = minimalist.bg_1, style = 'underline' },
+    NeogitHunkHeaderHighlight  = { fg = minimalist.bg_1, bg = minimalist.slightly_darker_bg, style = 'underline' },
     NeogitDiffContextHighlight = { fg = minimalist.none, bg = minimalist.slightly_darker_bg },
-    NeogitDiffAdd          =     { fg = minimalist.git_add, bg = minimalist.fg, style='reverse' },
-    NeogitDiffAddHighlight =     { fg = minimalist.git_add, bg = minimalist.fg, style='reverse' },
-    NeogitDiffDelete          =  { fg = minimalist.git_delete, bg = minimalist.fg, style='reverse' },
-    NeogitDiffDeleteHighlight =  { fg = minimalist.git_delete, bg = minimalist.fg, style='reverse' },
-    NeogitBranch =               { fg = minimalist.param },
-    NeogitRemote =               { fg = minimalist.bright_bg_1_2 },
+    NeogitDiffAdd              = { fg = minimalist.fg, bg = minimalist.git_add },
+    NeogitDiffAddHighlight     = { fg = minimalist.fg, bg = minimalist.git_add },
+    NeogitDiffDelete           = { fg = minimalist.fg, bg = minimalist.git_delete },
+    NeogitDiffDeleteHighlight  = { fg = minimalist.fg, bg = minimalist.git_delete },
+    NeogitBranch               = { fg = minimalist.param },
+    NeogitRemote               = { fg = minimalist.bright_bg_1_2 },
 
     NeogitStagedChanges   = { fg = minimalist.bright_bg_1_2, style = 'bold,italic,underline' },
     NeogitUnstagedChanges = { fg = minimalist.standout_special_1, style = 'bold,italic,underline' },

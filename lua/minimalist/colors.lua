@@ -44,8 +44,8 @@ local minimalist = {
   cursor_bg = "#282C35",
 
   -- Git
-  git_add           = "#31454c",
-  git_delete        = "#321b1b",
+  git_add           = "#2C3843",
+  git_delete        = "#342B35",
   git_gutter_change = '#383c47',
   git_gutter_add    = '#383c47',
   git_gutter_delete = '#1d222a',
