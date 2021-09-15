@@ -530,8 +530,8 @@ theme.loadPlugins = function()
     NvimTreeSpecialFile =       { fg = minimalist.bright_bg_1_2 , style = "underline" },
     NvimTreeFolderName=         { fg = minimalist.standout_less },
     NvimTreeEmptyFolderName=    { fg = minimalist.dark_bg_2 },
-    NvimTreeFolderIcon=         { fg = '#8AA398' },
-    NvimTreeIndentMarker =      { fg = '#6E9082' },
+    NvimTreeFolderIcon=         { fg = minimalist.folder_icon },
+    NvimTreeIndentMarker =      { fg = minimalist.indent_marker },
     LspDiagnosticsError =       { fg = minimalist.standout },
     LspDiagnosticsWarning =     { fg = minimalist.standout_more },
     LspDiagnosticsInformation = { fg = minimalist.param },
@@ -583,6 +583,11 @@ theme.loadPlugins = function()
     LspSagaDocTruncateLine        = {fg = minimalist.dark_bg_1},
     LineDiagTuncateLine           = {fg = minimalist.dark_bg_1},
     LspSagaCodeActionTruncateLine = {fg = minimalist.dark_bg_1},
+
+    -- trouble
+    TroubleCount    = { fg = minimalist.standout, bg = minimalist.slightly_lighter_bg },
+    TroubleFoldIcon = { fg = minimalist.indent_marker },
+    TroubleFile     = { fg = minimalist.bright_bg_1_2, style = 'bold,underline' },
 
 
     -- Sneak

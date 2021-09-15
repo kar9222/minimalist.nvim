@@ -29,6 +29,9 @@ local minimalist = {
 
   fold_bg = '#31343C',
 
+  folder_icon = '#8AA398',
+  indent_marker = '#6E9082',
+
   lightspeed_label = '#f02077',
   lightspeed_label_overlapped = '#e01067',
   lightspeed_shortcut = '#99ddff',
@@ -37,7 +40,7 @@ local minimalist = {
   lightspeed_label_distance_overlapped = '#afa86a',
   SpectreReplace_bg = '#02387e',
 
-  param = "#f8f8f2",  -- TODO
+  param = "#6E858D",
   diff_mode_added_line = "#ff0000",  -- TODO
 
   cursor_fg = "#b3c5d3",
