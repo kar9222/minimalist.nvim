@@ -60,6 +60,7 @@ theme.loadSyntax = function ()
 
     -- Julia syntax
 
+    juliaSymbol              = { fg = minimalist.fg },
     juliaCommentDelim        = { fg = minimalist.dark_bg_1 },
     juliaCommentKey          = { fg = minimalist.dark_bg_1 },
     juliaCodeSection         = { fg = minimalist.standout_special_1, style = 'bold' },
@@ -413,7 +414,7 @@ theme.loadPlugins = function()
   local plugins = {
 
     -- Spectre
-    SpectreFileDirectory = { fg = minimalist.standout },
+    SpectreFileDirectory = { fg = minimalist.bg_2 },
     SpectreFileName = { fg = minimalist.bright_bg_1_2, style = 'bold,underline' },
     SpectreUI      = { fg = minimalist.bg_3, style = 'italic' },
     SpectreSearch  = { fg = minimalist.standout_more },
