@@ -23,11 +23,13 @@ local minimalist = {
   standout_more = "#E6DB74",  -- String, number, boolean, etc
 
   standout_special_1 = "#C7C7BE",   -- Markdown title, section title, etc
+  standout_special_1_2 = "#dadad4",   -- Markdown title, section title, etc
   standout_special_2 = "#1f454f",   -- Find match bg, etc
   standout_special_2_2 = "#2e6676", -- Find match IncSearch, etc
   standout_special_3 = "#C7C7BF",   -- Keyword, etc
 
   fold_bg = '#31343C',
+  error_bg = '#6b5a6d',
 
   folder_icon = '#8AA398',
   indent_marker = '#6E9082',

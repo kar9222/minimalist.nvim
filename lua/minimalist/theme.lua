@@ -31,7 +31,7 @@ theme.loadSyntax = function ()
     Debug =          { fg = minimalist.standout }, -- debugging statements
     Underlined =     { fg = minimalist.standout_more, bg = minimalist.none, style = 'underline' }, -- text that stands out, HTML links
     Ignore =         { fg = minimalist.dark_bg_2 }, -- left blank, hidden
-    Error =          { fg = minimalist.bg, bg = '#FFA1AA', style = 'bold' }, -- any erroneous construct TODO
+    Error =          { fg = minimalist.standout_special_1, bg = minimalist.error_bg, style = 'bold' }, -- any erroneous construct TODO
     Todo =           { fg = minimalist.bg_1, bg = minimalist.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     -- Help docs
@@ -73,7 +73,7 @@ theme.loadSyntax = function ()
 
     juliaKeyword = { fg = minimalist.standout_special_1 },
     juliaFunctionName = { fg = minimalist.standout },
-    juliaMacro = { fg = minimalist.standout_less },
+    juliaMacro = { fg = minimalist.standout_special_1_2 },
     -- juliaConditional = { fg = minimalist.standout },  -- TODO No need?
     juliaException = { fg = minimalist.standout },
     juliaFunctionCall = { fg = minimalist.standout_less },
@@ -246,10 +246,6 @@ theme.loadEditor = function ()
     DashboardHeader =   { fg = minimalist.bright_bg_1_2 },
     DashboardCenter =   { fg = minimalist.standout_less },
     DashboardFooter =   { fg = minimalist.standout_more, style = "italic" },
-
-    -- BufferLine
-    BufferLineIndicatorSelected = { fg = minimalist.bg },
-    BufferLineFill =              { bg = minimalist.bg },
   }
 
   -- Options:
