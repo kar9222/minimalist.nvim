@@ -12,7 +12,7 @@ local minimalist = {
   bg_3 = "#82a2ad",  -- Status bar fg
 
   bright_bg_1 = "#BECBCD",  -- TODO
-  bright_bg_1_2 = "#BECECA"        ,
+  bright_bg_1_2 = "#BECECA",
 
   dark_standout_less = "#B3CACE",  -- xxx, etc. TODO Previously #b3c5d3 okay for VSCode
   dark_standout_less_2 = "#CCD9DD",  -- `str`, etc
@@ -43,7 +43,7 @@ local minimalist = {
   SpectreReplace_bg = '#02387e',
 
   param = "#6E858D",
-  diff_mode_added_line = "#ff0000",  -- TODO
+  diff_mode_added_line = "#342B35",  -- TODO
 
   cursor_fg = "#b3c5d3",
   cursor_bg = "#282C35",

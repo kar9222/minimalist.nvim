@@ -186,10 +186,12 @@ theme.loadEditor = function ()
     TermCursor =       { fg = minimalist.cursor_fg, bg = minimalist.cursor_bg, style = 'reverse' }, -- the character under the cursor
     TermCursorNC =     { fg = minimalist.cursor_fg, bg = minimalist.cursor_bg, style = 'reverse' }, -- the character under the cursor
     Directory =        { fg = minimalist.bright_bg_1, bg = minimalist.none }, -- directory names (and other special names in listings)
-    DiffAdd =          { fg = minimalist.standout_more, bg = minimalist.none, style = 'reverse' }, -- diff mode: Added line
-    DiffChange =       { fg = minimalist.diff_mode_added_line, bg = minimalist.none, style = 'reverse' }, --  diff mode: Changed line
-    DiffDelete =       { fg = minimalist.standout, bg = minimalist.none, style = 'reverse' }, -- diff mode: Deleted line
-    DiffText =         { fg = minimalist.standout_more, bg = minimalist.none, style = 'reverse' }, -- diff mode: Changed text within a changed line
+
+    DiffAdd    = { fg = minimalist.none, bg = minimalist.git_add, },
+    DiffChange = { fg = minimalist.none, bg = minimalist.git_change, },
+    DiffDelete = { fg = minimalist.none, bg = minimalist.git_delete, },
+    DiffText   = { fg = minimalist.none, bg = minimalist.git_change, },  -- Changed text within a changed line TODO Correct?
+
     EndOfBuffer =      { fg = minimalist.bg },  -- Filler lines `~`
     ErrorMsg =         { fg = minimalist.none },
     Folded =           { fg = minimalist.standout_less, bg = minimalist.fold_bg  },
@@ -481,10 +483,10 @@ theme.loadPlugins = function()
     NeogitNotificationWarning = { fg = minimalist.standout_more },
     NeogitNotificationError   = { fg = minimalist.standout },
 
-    -- GitGutter
-    GitGutterAdd =    { fg = minimalist.standout_more }, -- diff mode: Added line |diff.txt|
-    GitGutterChange = { fg = minimalist.standout_more }, -- diff mode: Changed line |diff.txt|
-    GitGutterDelete = { fg = minimalist.standout }, -- diff mode: Deleted line |diff.txt|
+    -- GitGutter TODO
+    GitGutterAdd =    { fg = minimalist.red  , bg = minimalist.red}, -- diff mode: Added line |diff.txt|
+    GitGutterChange = { fg = minimalist.red  , bg = minimalist.red}, -- diff mode: Changed line |diff.txt|
+    GitGutterDelete = { fg = minimalist.blue , bg = minimalist.red}, -- diff mode: Deleted line |diff.txt|
 
     -- GitSigns
     GitSignsChange =   { fg = minimalist.git_gutter_change }, -- diff mode: Changed line |diff.txt|
@@ -509,14 +511,15 @@ theme.loadPlugins = function()
     TelescopeResultsBorder  = { fg = minimalist.dark_bg_1 },
     TelescopePreviewBorder  = { fg = minimalist.dark_bg_1 },
 
-    TelescopeResultsClass    = { fg = minimalist.standout_special_1 },
-    TelescopeResultsConstant = { fg = minimalist.bright_bg_1 },
-    TelescopeResultsField    = { fg = minimalist.bright_bg_1 },
-    TelescopeResultsFunction = { fg = minimalist.standout_less },
-    TelescopeResultsMethod   = { fg = minimalist.standout_less },
-    TelescopeResultsOperator = { fg = minimalist.standout_more },
-    TelescopeResultsStruct   = { fg = minimalist.standout_special_1 },
-    TelescopeResultsVariable = { fg = minimalist.standout_special_1 },
+    TelescopeResultsClass      = { fg = minimalist.standout_special_1 },
+    TelescopeResultsConstant   = { fg = minimalist.bright_bg_1 },
+    TelescopeResultsField      = { fg = minimalist.bright_bg_1 },
+    TelescopeResultsFunction   = { fg = minimalist.standout_less },
+    TelescopeResultsMethod     = { fg = minimalist.standout_less },
+    TelescopeResultsOperator   = { fg = minimalist.standout_more },
+    TelescopeResultsStruct     = { fg = minimalist.standout_special_1 },
+    TelescopeResultsVariable   = { fg = minimalist.standout_special_1 },
+    TelescopeResultsDiffChange = { fg = minimalist.git_delete_emph, bg = minimalist.none },
 
     -- NvimTree
     NvimTreeRootFolder =        { fg = minimalist.standout_special_1 },
