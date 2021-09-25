@@ -50,7 +50,9 @@ local minimalist = {
 
   -- Git
   git_add           = "#2C3843",
+  git_add_emph      = "#425E75",
   git_delete        = "#342B35",
+  git_delete_emph   = "#5A4B5C",
   git_change        = "#394855",
   git_gutter_change = '#383c47',
   git_gutter_add    = '#383c47',
