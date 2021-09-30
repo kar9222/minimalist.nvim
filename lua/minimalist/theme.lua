@@ -146,6 +146,10 @@ theme.loadSyntax = function ()
     -- htmlLink = { fg = minimalist.dark_standout_less_2, style = "italic" },
     -- mkdUrl = { fg = minimalist.bg_1, style = 'italic' },
 
+    -- TOML
+    tomlKey    = { fg = minimalist.standout_less },
+    tomlString = { fg = minimalist.fg },
+
     -- XML
     xmlTag     = { fg = minimalist.dark_bg_1 },
     xmlTagName = { fg = minimalist.bg_1 },
@@ -226,7 +230,7 @@ theme.loadEditor = function ()
     TabLineFill =      { fg = minimalist.fg },
     TablineSel =       { fg = minimalist.standout_less, bg = minimalist.standout },
     Tabline =          { fg = minimalist.fg },
-    Title =            { fg = minimalist.standout_more, bg = minimalist.none, style = 'bold' },
+    Title =            { fg = minimalist.standout, bg = minimalist.none },
     Visual =           { fg = minimalist.none, bg = minimalist.dark_bg_2 },
     VisualNOS =        { fg = minimalist.none, bg = minimalist.dark_bg_2 },
     WarningMsg =       { fg = minimalist.standout_more },
