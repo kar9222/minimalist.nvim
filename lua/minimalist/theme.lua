@@ -146,6 +146,10 @@ theme.loadSyntax = function ()
     -- htmlLink = { fg = minimalist.dark_standout_less_2, style = "italic" },
     -- mkdUrl = { fg = minimalist.bg_1, style = 'italic' },
 
+    -- XML
+    xmlTag     = { fg = minimalist.dark_bg_1 },
+    xmlTagName = { fg = minimalist.bg_1 },
+
   }
 
   	-- Italic comments
