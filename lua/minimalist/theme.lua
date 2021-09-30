@@ -146,6 +146,11 @@ theme.loadSyntax = function ()
     -- htmlLink = { fg = minimalist.dark_standout_less_2, style = "italic" },
     -- mkdUrl = { fg = minimalist.bg_1, style = 'italic' },
 
+    -- JSON
+    jsonKeyword = { fg = minimalist.fg },
+    jsonString  = { fg = minimalist.standout },
+    jsonQuote   = { fg = minimalist.bg_1 },
+
     -- TOML
     tomlKey    = { fg = minimalist.standout_less },
     tomlString = { fg = minimalist.fg },
