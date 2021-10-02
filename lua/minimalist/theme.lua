@@ -540,7 +540,7 @@ theme.loadPlugins = function()
     NvimTreeGitNew =            { fg = minimalist.standout_more },
     NvimTreeImageFile =         { fg = minimalist.standout_more },
     NvimTreeExecFile =          { fg = minimalist.standout_more },
-    NvimTreeSpecialFile =       { fg = minimalist.bright_bg_1_2 , style = "underline" },
+    NvimTreeSpecialFile =       { fg = minimalist.standout_special_1 },
     NvimTreeFolderName=         { fg = minimalist.standout_less },
     NvimTreeEmptyFolderName=    { fg = minimalist.dark_bg_2 },
     NvimTreeFolderIcon=         { fg = minimalist.folder_icon },
