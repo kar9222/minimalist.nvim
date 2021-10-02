@@ -545,6 +545,7 @@ theme.loadPlugins = function()
     NvimTreeEmptyFolderName=    { fg = minimalist.dark_bg_2 },
     NvimTreeFolderIcon=         { fg = minimalist.folder_icon },
     NvimTreeIndentMarker =      { fg = minimalist.indent_marker },
+    NvimTreeWindowPicker =      { fg = minimalist.standout, bg = minimalist.standout_special_2, style = 'bold' },
     LspDiagnosticsError =       { fg = minimalist.standout },
     LspDiagnosticsWarning =     { fg = minimalist.standout_more },
     LspDiagnosticsInformation = { fg = minimalist.param },
