@@ -92,6 +92,7 @@ theme.loadSyntax = function ()
     helpExample = { fg = minimalist.standout_less },
 
     -- Vim
+    vimLet        = { fg = minimalist.bg_1 },
     vimFunc       = { fg = minimalist.standout },  -- Custom hl group `function`
     vimKeywordEnd = { fg = minimalist.bg_1 },  -- end, endfunction, endif, endfu, etc
     vimNotFunc    = { fg = minimalist.standout },  -- if, while, return, etc
@@ -603,11 +604,6 @@ theme.loadPlugins = function()
     TroubleFoldIcon = { fg = minimalist.indent_marker },
     TroubleFile     = { fg = minimalist.bright_bg_1_2, style = 'bold,underline' },
 
-
-    -- Sneak
-    -- Sneak =      { fg = minimalist.bg, bg = minimalist.fg },
-    -- SneakScope = { bg = minimalist.dark_bg_2 },
-
     -- Indent Blankline
     IndentBlanklineChar =        { fg = minimalist.standout },
     IndentBlanklineContextChar = { fg = minimalist.standout },
@@ -615,19 +611,6 @@ theme.loadPlugins = function()
     -- Illuminate
     illuminatedWord =    { bg = minimalist.standout },
     illuminatedCurWord = { bg = minimalist.standout },
-
-    -- nvim-dap
-    -- DapBreakpoint = { fg = minimalist.standout_more},
-    -- DapStopped =    { fg = minimalist.standout_more},
-
-    -- Hop
-    -- HopNextKey =   { fg = minimalist.fg, style = 'bold' },
-    -- HopNextKey1 =  { fg = minimalist.standout_less, style = 'bold' },
-    -- HopNextKey2 =  { fg = minimalist.fg},
-    -- HopUnmatched = { fg = minimalist.standout },
-
-    -- Fern
-    -- FernBranchText = { fg = minimalist.bg_2},
 
     -- DevIcon
     DevIconR         = { fg = minimalist.DevIconR },
