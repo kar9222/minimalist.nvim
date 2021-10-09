@@ -5,7 +5,6 @@ Minimalistic style. All colors are chosen & hand tuned manually with love
 Styles
 - Focus on keywords with minimal visual noise
 - Customized for R, Julia, Vimscript, etc
-
 - 3 light colors: matching colors and good contrast for plots
 - Dark colors for everything else e.g. comments, operators, brackets, quotes
 - Consistent styles for everything mentioned above
