@@ -1,15 +1,20 @@
-# Minimalist Neovim theme
+# Minimalist Neovim theme 🎨
 
-Minimalistic style. All colors are chosen & hand tuned manually with love
+Minimalistic style. All colors are chosen and hand tuned manually with ❤️
+- Focus on 'important stuffs' with minimal visual noise
+- Customized for R, Julia, Lua, Vimscript, etc
 
-Styles
-- Focus on keywords with minimal visual noise
-- Customized for R, Julia, Vimscript, etc
-- 3 light colors: matching colors and good contrast for plots
+<hr/>
+
+Design
+- Three main light colors designed for focusing on 'important stuffs'. It's
+also partially designed for plotting (low-medium-high gradient palette).
 - Dark colors for everything else e.g. comments, operators, brackets, quotes
-- Consistent styles for everything mentioned above
-- Syntax highlighting styles
+- Language-specific highlight
 
 For gallery, see [kar9222/nvim](https://github.com/kar9222/nvim)
 
-_(It's usable but too messy coz I just came back to Neovim a month ago. To be refactor, cleanup, etc)_
+
+# Internal notes 
+
+- [ ] Refactor, cleanup and pay off technical debts
