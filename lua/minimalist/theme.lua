@@ -91,6 +91,10 @@ theme.loadSyntax = function ()
     juliacocCode = { fg = co.fg },
     helpExample = { fg = co.standout_less },
 
+    -- SQL
+    sqlStatement = { fg = co.standout },
+    sqlKeyword   = { fg = co.standout },
+
     -- Vim
     vimLet        = { fg = co.bg_1 },
     vimFunc       = { fg = co.standout },  -- Custom hl group `function`
