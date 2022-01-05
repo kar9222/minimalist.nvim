@@ -34,6 +34,15 @@ local minimalist = {
   folder_icon = '#8AA398',
   indent_marker = '#6E9082',
 
+  lsp_diag_error    = '#ff6464',
+  lsp_diag_warn     = '#fa973a',
+  lsp_diag_info     = '#00b7e4',
+  lsp_diag_hint     = '#2faf64',
+  lsp_diag_error_bg = '#342B35',
+  lsp_diag_warn_bg  = '#322D29',
+  lsp_diag_info_bg  = '#293032',
+  lsp_diag_hint_bg  = '#29322C',
+
   lightspeed_label = '#f02077',
   lightspeed_label_overlapped = '#e01067',
   lightspeed_shortcut = '#99ddff',

@@ -395,29 +395,58 @@ theme.loadLSP = function ()
   -- Lsp highlight groups
 
   local lsp = {
-    LspDiagnosticsDefaultError =           { fg = co.standout }, -- used for "Error" diagnostic virtual text
-    LspDiagnosticsSignError =              { fg = co.standout }, -- used for "Error" diagnostic signs in sign column
-    LspDiagnosticsFloatingError =          { fg = co.standout }, -- used for "Error" diagnostic messages in the diagnostics float
-    LspDiagnosticsVirtualTextError =       { fg = co.standout }, -- Virtual text "Error"
-    LspDiagnosticsUnderlineError =         { style = 'undercurl', sp = co.standout }, -- used to underline "Error" diagnostics.
-    LspDiagnosticsDefaultWarning =         { fg = co.standout_more}, -- used for "Warning" diagnostic signs in sign column
-    LspDiagnosticsSignWarning =            { fg = co.standout_more}, -- used for "Warning" diagnostic signs in sign column
-    LspDiagnosticsFloatingWarning =        { fg = co.standout_more}, -- used for "Warning" diagnostic messages in the diagnostics float
-    LspDiagnosticsVirtualTextWarning =     { fg = co.standout_more}, -- Virtual text "Warning"
-    LspDiagnosticsUnderlineWarning =       { style = 'undercurl', sp = co.standout_more }, -- used to underline "Warning" diagnostics.
-    LspDiagnosticsDefaultInformation =     { fg = co.param }, -- used for "Information" diagnostic virtual text
-    LspDiagnosticsSignInformation =        { fg = co.param },  -- used for "Information" diagnostic signs in sign column
-    LspDiagnosticsFloatingInformation =    { fg = co.param }, -- used for "Information" diagnostic messages in the diagnostics float
+
+    DiagnosticError            = { fg = co.lsp_diag_error },
+    DiagnosticSignError        = { fg = co.lsp_diag_error },
+    DiagnosticFloatingError    = { fg = co.lsp_diag_error },
+    DiagnosticVirtualTextError = { fg = co.lsp_diag_error, bg = co.lsp_diag_error_bg },
+    DiagnosticUnderlineError   = { fg = co.lsp_diag_error },
+
+    DiagnosticWarn             = { fg = co.lsp_diag_warn },
+    DiagnosticSignWarn         = { fg = co.lsp_diag_warn },
+    DiagnosticFloatingWarn     = { fg = co.lsp_diag_warn },
+    DiagnosticVirtualTextWarn  = { fg = co.lsp_diag_warn, bg = co.lsp_diag_warn_bg },
+    DiagnosticUnderlineWarn    = { fg = co.lsp_diag_warn },
+
+    DiagnosticInfo             = { fg = co.lsp_diag_info },
+    DiagnosticSignInfo         = { fg = co.lsp_diag_info },
+    DiagnosticFloatingInfo     = { fg = co.lsp_diag_info },
+    DiagnosticVirtualTextInfo  = { fg = co.lsp_diag_info, bg = co.lsp_diag_info_bg },
+    DiagnosticUnderlineInfo    = { fg = co.lsp_diag_info },
+
+    DiagnosticHint             = { fg = co.lsp_diag_hint },
+    DiagnosticSignHint         = { fg = co.lsp_diag_hint },
+    DiagnosticFloatingHint     = { fg = co.lsp_diag_hint },
+    DiagnosticVirtualTextHint  = { fg = co.lsp_diag_hint, bg = co.lsp_diag_hint_bg },
+    DiagnosticUnderlineHint    = { fg = co.lsp_diag_hint },
+
+    LspDiagnosticsDefaultError           = { fg = co.standout }, -- used for "Error" diagnostic virtual text
+    LspDiagnosticsSignError              = { fg = co.standout }, -- used for "Error" diagnostic signs in sign column
+    LspDiagnosticsFloatingError          = { fg = co.standout }, -- used for "Error" diagnostic messages in the diagnostics float
+    LspDiagnosticsVirtualTextError       = { fg = co.standout }, -- Virtual text "Error"
+    LspDiagnosticsUnderlineError         = { style = 'undercurl', sp = co.standout }, -- used to underline "Error" diagnostics.
+
+    LspDiagnosticsDefaultWarning         = { fg = co.standout_more}, -- used for "Warning" diagnostic signs in sign column
+    LspDiagnosticsSignWarning            = { fg = co.standout_more}, -- used for "Warning" diagnostic signs in sign column
+    LspDiagnosticsFloatingWarning        = { fg = co.standout_more}, -- used for "Warning" diagnostic messages in the diagnostics float
+    LspDiagnosticsVirtualTextWarning     = { fg = co.standout_more}, -- Virtual text "Warning"
+    LspDiagnosticsUnderlineWarning       = { style = 'undercurl', sp = co.standout_more }, -- used to underline "Warning" diagnostics.
+
+    LspDiagnosticsDefaultInformation     = { fg = co.param }, -- used for "Information" diagnostic virtual text
+    LspDiagnosticsSignInformation        = { fg = co.param },  -- used for "Information" diagnostic signs in sign column
+    LspDiagnosticsFloatingInformation    = { fg = co.param }, -- used for "Information" diagnostic messages in the diagnostics float
     LspDiagnosticsVirtualTextInformation = { fg = co.param }, -- Virtual text "Information"
-    LspDiagnosticsUnderlineInformation =   { style = 'undercurl', sp = co.param }, -- used to underline "Information" diagnostics.
-    LspDiagnosticsDefaultHint =            { fg = co.bright_bg_1_2  },  -- used for "Hint" diagnostic virtual text
-    LspDiagnosticsSignHint =               { fg = co.bright_bg_1_2  }, -- used for "Hint" diagnostic signs in sign column
-    LspDiagnosticsFloatingHint =           { fg = co.bright_bg_1_2  }, -- used for "Hint" diagnostic messages in the diagnostics float
-    LspDiagnosticsVirtualTextHint =        { fg = co.bright_bg_1_2  }, -- Virtual text "Hint"
-    LspDiagnosticsUnderlineHint =          { style = 'undercurl', sp = co.param }, -- used to underline "Hint" diagnostics.
-    LspReferenceText =                     { fg = co.fg, bg = co.dark_bg_2 }, -- used for highlighting "text" references
-    LspReferenceRead =                     { fg = co.fg, bg = co.dark_bg_2 }, -- used for highlighting "read" references
-    LspReferenceWrite =                    { fg = co.fg, bg = co.dark_bg_2 }, -- used for highlighting "write" references
+    LspDiagnosticsUnderlineInformation   = { style = 'undercurl', sp = co.param }, -- used to underline "Information" diagnostics.
+
+    LspDiagnosticsDefaultHint            = { fg = co.bright_bg_1_2  },  -- used for "Hint" diagnostic virtual text
+    LspDiagnosticsSignHint               = { fg = co.bright_bg_1_2  }, -- used for "Hint" diagnostic signs in sign column
+    LspDiagnosticsFloatingHint           = { fg = co.bright_bg_1_2  }, -- used for "Hint" diagnostic messages in the diagnostics float
+    LspDiagnosticsVirtualTextHint        = { fg = co.bright_bg_1_2  }, -- Virtual text "Hint"
+    LspDiagnosticsUnderlineHint          = { style = 'undercurl', sp = co.param }, -- used to underline "Hint" diagnostics.
+
+    LspReferenceText  = { fg = co.fg, bg = co.dark_bg_2 }, -- used for highlighting "text" references
+    LspReferenceRead  = { fg = co.fg, bg = co.dark_bg_2 }, -- used for highlighting "read" references
+    LspReferenceWrite = { fg = co.fg, bg = co.dark_bg_2 }, -- used for highlighting "write" references
   }
 
   return lsp
