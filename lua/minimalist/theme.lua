@@ -40,6 +40,9 @@ theme.loadSyntax = function ()
     helpHyperTextEntry = { fg = co.standout },
     helpHyperTextJump  = { fg = co.standout_more },
     helpSectionDelim   = { fg = co.bg_2 },
+    manSectionHeading  = { fg = co.standout, style = 'bold' },
+    manSubHeading      = { fg = co.standout, style = 'bold' },
+    manOptionDesc      = { fg = co.standout_more, style = 'bold' },
 
     -- R syntax
 
