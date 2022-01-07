@@ -557,6 +557,7 @@ theme.loadPlugins = function()
     TelescopePromptBorder   = { fg = co.dark_bg_1 },
     TelescopeResultsBorder  = { fg = co.dark_bg_1 },
     TelescopePreviewBorder  = { fg = co.dark_bg_1 },
+    TelescopeMultiSelection = { bg = co.dark_bg_1 },  -- multi_icon disabled
 
     TelescopeResultsClass      = { fg = co.standout_special_1 },
     TelescopeResultsConstant   = { fg = co.bright_bg_1 },
