@@ -82,7 +82,7 @@ theme.loadSyntax = function ()
     juliaFunctionCall = { fg = co.standout_less },
     juliaParDelim = { fg = co.bg_1 },
     juliaComma = { fg = co.bg_1 },
-    juliaSemicolon = { fg = co.bg_1 },
+    juliaSemicolon = { fg = co.standout_special_1 },  -- NOTE It's brighter than other operators
     juliaInfixKeyword = { fg = co.bright_bg_1_2 },
     juliaComprehensionFor = { fg = co.standout },
     juliaBlKeyword = { fg = co.standout },
