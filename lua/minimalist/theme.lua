@@ -155,9 +155,10 @@ theme.loadSyntax = function ()
     -- mkdUrl = { fg = co.bg_1, style = 'italic' },
 
     -- JSON
-    jsonKeyword = { fg = co.fg },
-    jsonString  = { fg = co.standout },
-    jsonQuote   = { fg = co.bg_1 },
+    jsonKeyword     = { fg = co.fg },
+    jsonString      = { fg = co.standout },
+    jsonQuote       = { fg = co.bg_1 },
+    jsonCommentTodo = { fg = co.bg_1, bg = co.none, style = 'bold,italic' },
 
     -- TOML
     tomlKey    = { fg = co.standout_less },
