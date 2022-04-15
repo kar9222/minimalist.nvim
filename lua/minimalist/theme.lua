@@ -573,6 +573,9 @@ theme.loadPlugins = function()
     TelescopeResultsVariable   = { fg = co.standout_special_1 },
     TelescopeResultsDiffChange = { fg = co.git_delete_emph, bg = co.none },
 
+    -- harpoon
+    HarpoonBorder = { fg = co.dark_bg_1 },
+
     -- NvimTree
     NvimTreeRootFolder =        { fg = co.standout_special_1 },
     NvimTreeGitDirty =          { fg = co.standout_more },
