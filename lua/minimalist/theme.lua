@@ -51,7 +51,7 @@ theme.loadSyntax = function ()
     rFunctionName        = { fg = co.standout },
     rKeywordFunction     = { fg = co.bright_bg_1_2, style = 'bold' },
     rCommentKey          = { fg = co.dark_bg_1 },
-    rCodeSection         = { fg = co.standout_special_1, style = 'bold' },
+    rCodeSection         = { fg = co.standout_special_0, style = 'bold' },
     rCodeSectionEndDelim = { fg = co.bg_2 },
 
     -- Doc
@@ -66,7 +66,7 @@ theme.loadSyntax = function ()
     juliaSymbol              = { fg = co.fg },
     juliaCommentDelim        = { fg = co.dark_bg_1 },
     juliaCommentKey          = { fg = co.dark_bg_1 },
-    juliaCodeSection         = { fg = co.standout_special_1, style = 'bold' },
+    juliaCodeSection         = { fg = co.standout_special_0, style = 'bold' },
     juliaCodeSectionEndDelim = { fg = co.bg_2 },
 
     -- Literal `function`, `macro`, `struct`, etc
@@ -118,7 +118,7 @@ theme.loadSyntax = function ()
 
     -- Pandoc
     pandocAtxStart  = { fg = co.standout, style = "bold" },
-    pandocAtxHeader = { fg = co.standout, style = "bold" },
+    pandocAtxHeader = { fg = co.standout_special_0, style = "bold" },  -- Title
     pandocDelimitedCodeBlockStart = { fg = co.bg_1 },
     pandocDelimitedCodeBlockLanguage = { fg = co.bg_1 },
     pandocStrong = { fg = co.standout_more, style = 'bold' },

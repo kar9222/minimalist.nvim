@@ -22,8 +22,9 @@ local minimalist = {
   standout      = "#dac8c8",  -- Keyword, etc
   standout_more = "#E6DB74",  -- String, number, boolean, etc
 
-  standout_special_1 = "#C7C7BE",   -- Markdown title, section title, etc
-  standout_special_1_2 = "#dadad4",   -- Markdown title, section title, etc
+  standout_special_0 = "#dad49c",   -- Markdown title, section title, etc
+  standout_special_1 = "#C7C7BE",   -- juliaKeyword, etc
+  standout_special_1_2 = "#dadad4",   -- juliaMacro
   standout_special_2 = "#1f454f",   -- Find match bg, etc
   standout_special_2_2 = "#2e6676", -- Find match IncSearch, etc
   standout_special_3 = "#C7C7BF",   -- Keyword, etc
