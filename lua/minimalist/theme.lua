@@ -265,6 +265,9 @@ theme.loadEditor = function ()
     healthSuccess = { fg = co.standout_more },
     healthWarning = { fg = co.standout_more },
 
+    -- Custom highlight group
+    VimHighlight = { fg = co.none, bg = co.standout_special_2_3 },  -- vim.highlight
+
     -- dashboard
     DashboardShortCut = { fg = co.bright_bg_1 },
     DashboardHeader =   { fg = co.bright_bg_1_2 },

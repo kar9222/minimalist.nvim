@@ -27,6 +27,7 @@ local minimalist = {
   standout_special_1_2 = "#dadad4",   -- juliaMacro
   standout_special_2 = "#2e6676",   -- Find match bg, etc (prev color #1f454f)
   standout_special_2_2 = "#A56969", -- Find match IncSearch, etc (prev color #2e6676)
+  standout_special_2_3 = "#1f454f", -- vim.highlight
   standout_special_3 = "#C7C7BF",   -- Keyword, etc
 
   fold_bg = '#31343C',
