@@ -549,6 +549,18 @@ theme.loadPlugins = function()
     GitSignsDelete =   { fg = co.git_gutter_delete }, -- diff mode: Deleted line |diff.txt|
     GitSignsDeleteNr = { fg = co.bg_1, bg = co.git_delete }, -- diff mode: Deleted line |diff.txt|
     GitSignsDeleteLn = { bg = co.git_delete }, -- diff mode: Deleted line |diff.txt|
+    -- Word diff in previews
+    GitSignsAddInline          = { bg = co.git_add_emph },
+    GitSignsChangeInline       = { bg = co.git_change_emph },
+    GitSignsDeleteInline       = { bg = co.git_delete_emph },
+    -- Word diff in buffer
+    GitSignsAddLnInline        = { bg = co.git_add_emph },
+    GitSignsChangeLnInline     = { bg = co.git_change_emph },
+    GitSignsDeleteLnInline     = { bg = co.git_delete_emph },
+    -- Word diff in virtual lines (e.g. show_deleted)
+    GitSignsAddVirtLnInline    = { bg = co.git_add_emph },
+    GitSignsChangeVirtLnInline = { bg = co.git_change_emph },
+    GitSignsDeleteVirtLnInline = { bg = co.git_delete_emph },
 
     -- Telescope
 
