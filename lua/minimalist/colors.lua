@@ -26,6 +26,9 @@ local minimalist = {
   standout_more = "#E6DB74",  -- String, number, boolean, etc
 
   standout_special_0 = "#dad49c",   -- Markdown title, section title, etc
+  -- standout_special_0 = "#8ABDC1",   -- Markdown title, section title, etc
+  -- standout_special_0 = "#CDE1B9",   -- Markdown title, section title, etc
+  -- standout_special_0 = "#BED2AA",   -- Markdown title, section title, etc
   standout_special_1 = "#C7C7BE",   -- juliaKeyword, etc
   standout_special_1_2 = "#dadad4",   -- juliaMacro
   standout_special_2 = "#2e6676",   -- Find match bg, etc (prev color #1f454f)
