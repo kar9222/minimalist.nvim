@@ -125,6 +125,7 @@ theme.loadSyntax = function ()
     pandocEmphasis = { fg = co.standout_more, style = 'italic' },  -- Italicized text
     pandocNoFormatted = { fg = co.standout_less },  -- Code block
     pandocReferenceDefinition = { fg = co.bright_bg_1, style = 'italic' },  -- Concealed link title. Use brighter color because it's concealed
+    pandocBlockquote = { fg = co.standout_less },
 
 
     -- Markdown. NOTE This also affects other filetype e.g. R
