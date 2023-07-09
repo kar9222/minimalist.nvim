@@ -53,6 +53,7 @@ theme.loadSyntax = function ()
     rCommentKey          = { fg = co.dark_bg_1 },
     rCodeSection         = { fg = co.standout_special_0, style = 'bold' },
     rCodeSectionEndDelim = { fg = co.bg_2 },
+    rNotOperator         = { fg = co.standout_more },  -- Override `!` operator from default `rOperator` highlight group
 
     -- Doc
     rOTitle      = { fg = co.bright_bg_1, style = 'bold' },
