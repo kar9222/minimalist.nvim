@@ -603,6 +603,8 @@ theme.loadPlugins = function()
     NvimTreeFolderName=         { fg = co.standout_less },
     NvimTreeEmptyFolderName=    { fg = co.dark_bg_2 },
     NvimTreeFolderIcon=         { fg = co.folder_icon },
+    NvimTreeFolderArrowOpen =   { fg = co.folder_icon },
+    NvimTreeFolderArrowClosed = { fg = co.folder_icon },
     NvimTreeIndentMarker =      { fg = co.indent_marker },
     NvimTreeWindowPicker =      { fg = co.standout, bg = co.standout_special_2, style = 'bold' },
     LspDiagnosticsError =       { fg = co.standout },
