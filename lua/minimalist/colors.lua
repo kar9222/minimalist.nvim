@@ -34,7 +34,7 @@ local minimalist = {
   error_bg = '#6b5a6d',
 
   folder_icon = '#8AA398',
-  indent_marker = '#6E9082',
+  indent_marker = '#384640',  -- folder_icon L - 35
 
   lsp_diag_error    = '#ff6464',
   lsp_diag_warn     = '#fa973a',
