@@ -624,6 +624,19 @@ theme.loadPlugins = function()
     CmpDocumentation       = { fg = co.fg, bg = co.bg },
     CmpDocumentationBorder = { fg = co.dark_bg_1, bg = co.bg },
 
+    -- headlines
+    -- bg = (10 * nord0 + fg) / 11
+    -- Quote     = { fg = '#ff0000' },
+    -- CodeBlock = { bg = co.slightly_lighter_bg },
+    -- Dash      = { co = '#ff0000', bold = true },
+    Headline1 = { fg = "#D08770",  bg = "#3d3c44", bold = true },
+    Headline2 = { fg = '#EBCB8B', bg = "#3f4247", bold = true },
+    Headline3 = { fg = '#A3BE8C', bg = "#394147", bold = true },
+    Headline4 = { fg = '#81A1C1', bg = "#363e4c", bold = true },
+    Headline5 = { fg = '#B48EAD', bg = "#3a3c4a", bold = true },
+    Headline6 = { fg = '#D8DEE9', bg = "#3d434f", bold = true },
+
+
     -- LspSaga: TODO https://github.com/glepnir/lspsaga.nvim/pull/198/files
 
     LspFloatWinNormal        = { bg = co.bg },
