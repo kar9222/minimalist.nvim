@@ -383,6 +383,171 @@ theme.loadTreeSitter = function ()
     TSLiteral =           { fg = co.fg },    -- Literal text.
     TSURI =               { fg = co.standout_more },    -- Any URI like a link or email.        TSAnnotation =                                                                  { fg = co.standout },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 
+
+  -- TODO ----------------------------------------------------------------------------------------
+
+    -- -- These groups are for the Neovim tree-sitter highlights.
+    -- ["@annotation"] = { link = "PreProc" },
+    -- ["@attribute"] = { link = "PreProc" },
+    -- ["@boolean"] = { link = "Boolean" },
+    -- ["@character"] = { link = "Character" },
+    -- ["@character.special"] = { link = "SpecialChar" },
+    -- ["@comment"] = { link = "Comment" },
+    -- ["@keyword.conditional"] = { link = "Conditional" },
+    -- ["@constant"] = { link = "Constant" },
+    -- ["@constant.builtin"] = { link = "Special" },
+    -- ["@constant.macro"] = { link = "Define" },
+    -- ["@keyword.debug"] = { link = "Debug" },
+    -- ["@keyword.directive.define"] = { link = "Define" },
+    -- ["@keyword.exception"] = { link = "Exception" },
+    -- ["@number.float"] = { link = "Float" },
+    -- ["@function"] = { link = "Function" },
+    -- ["@function.builtin"] = { link = "Special" },
+    -- ["@function.call"] = { link = "@function" },
+    -- ["@function.macro"] = { link = "Macro" },
+    -- ["@keyword.import"] = { link = "Include" },
+    -- ["@keyword.coroutine"] = { link = "@keyword" },
+    -- ["@keyword.operator"] = { link = "@operator" },
+    -- ["@keyword.return"] = { link = "@keyword" },
+    -- ["@function.method"] = { link = "Function" },
+    -- ["@function.method.call"] = { link = "@function.method" },
+    -- ["@namespace.builtin"] = { link = "@variable.builtin" },
+    -- ["@none"] = {},
+    -- ["@number"] = { link = "Number" },
+    -- ["@keyword.directive"] = { link = "PreProc" },
+    -- ["@keyword.repeat"] = { link = "Repeat" },
+    -- ["@keyword.storage"] = { link = "StorageClass" },
+    -- ["@string"] = { link = "String" },
+    ["@markup.link.label"] = { fg = "#c792ea", style = 'underline' },
+    ["@markup.link.label.symbol"] = { fg = "#c792ea" },
+    ["@markup.link.url"] = { fg = "#c792ea" },
+    -- ["@tag"] = { link = "Label" },
+    -- ["@tag.attribute"] = { link = "@property" },
+    -- ["@tag.delimiter"] = { link = "Delimiter" },
+    ["@markup"] = { link = "@none" },
+    ["@markup.environment"] = { link = "Macro" },
+    ["@markup.environment.name"] = { link = "Type" },
+    ["@markup.raw"] = { link = 'String' },
+    ["@markup.math"] = { link = "Special" },
+    ["@markup.strong"] = { fg = co.standout_more, style = 'bold' },
+    ["@markup.emphasis"] = { fg = co.standout_more, style = 'italic' },
+    ["@markup.strikethrough"] = { strikethrough = true },
+    ["@markup.underline"] = { underline = true },
+    ["@markup.heading"] = { fg = co.standout, style = 'bold' },
+    -- ["@comment.note"] = { fg = c.hint },
+    -- ["@comment.error"] = { fg = c.error },
+    -- ["@comment.hint"] = { fg = c.hint },
+    -- ["@comment.info"] = { fg = c.info },
+    -- ["@comment.warning"] = { fg = c.warning },
+    -- ["@comment.todo"] = { fg = c.todo },
+    -- ["@type"] = { link = "Type" },
+    -- ["@type.definition"] = { link = "Typedef" },
+    -- ["@type.qualifier"] = { link = "@keyword" },
+
+    -- --- Misc
+    -- -- TODO:
+    -- -- ["@comment.documentation"] = { },
+    -- ["@operator"] = { fg = c.blue5 }, -- For any operator: `+`, but also `->` and `*` in C.
+
+    -- --- Punctuation
+    -- ["@punctuation.delimiter"] = { fg = c.blue5 }, -- For delimiters ie: `.`
+    -- ["@punctuation.bracket"] = { fg = c.fg_dark }, -- For brackets and parens.
+    -- ["@punctuation.special"] = { fg = c.blue5 }, -- For special symbols (e.g. `{}` in string interpolation)
+    -- ["@markup.list"] = { fg = c.blue5 }, -- For special punctutation that does not fall in the catagories before.
+    ["@markup.list.markdown"] = { fg = '#c792ea', bold = true },  -- Ordered list
+
+    -- --- Literals
+    -- ["@string.documentation"] = { fg = c.yellow },
+    -- ["@string.regexp"] = { fg = c.blue6 }, -- For regexes.
+    -- ["@string.escape"] = { fg = c.magenta }, -- For escape characters within a string.
+
+    -- --- Functions
+    -- ["@constructor"] = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    -- ["@variable.parameter"] = { fg = c.yellow }, -- For parameters of a function.
+    -- ["@variable.parameter.builtin"] = { fg = util.lighten(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+
+    -- --- Keywords
+    -- ["@keyword"] = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
+    -- ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
+
+    -- ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
+
+    -- --- Types
+    -- ["@type.builtin"] = { fg = util.darken(c.blue1, 0.8) },
+    -- ["@variable.member"] = { fg = c.green1 }, -- For fields.
+    -- ["@property"] = { fg = c.green1 },
+
+    -- --- Identifiers
+    -- ["@variable"] = { fg = c.fg, style = options.styles.variables }, -- Any variable name that does not have another highlight.
+    -- ["@variable.builtin"] = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
+    -- ["@module.builtin"] = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
+
+    -- --- Text
+    -- -- ["@markup.raw.markdown"] = { fg = c.blue },
+    -- ["@markup.raw.markdown_inline"] = { bg = c.terminal_black, fg = c.blue },
+    -- ["@markup.link"] = { fg = c.teal },
+
+    -- ["@markup.list.unchecked"] = { fg = '#ff0000' }, -- For brackets and parens.
+    -- ["@markup.list.checked"] = { fg = '#ff0000' }, -- For brackets and parens.
+
+    -- ["@diff.plus"] = { link = "DiffAdd" },
+    -- ["@diff.minus"] = { link = "DiffDelete" },
+    -- ["@diff.delta"] = { link = "DiffChange" },
+
+    -- ["@module"] = { link = "Include" },
+
+    -- -- tsx
+    -- ["@tag.tsx"] = { fg = c.red },
+    -- ["@constructor.tsx"] = { fg = c.blue1 },
+    -- ["@tag.delimiter.tsx"] = { fg = util.darken(c.blue, 0.7) },
+
+    -- -- LSP Semantic Token Groups
+    -- ["@lsp.type.boolean"] = { link = "@boolean" },
+    -- ["@lsp.type.builtinType"] = { link = "@type.builtin" },
+    -- ["@lsp.type.comment"] = { link = "@comment" },
+    -- ["@lsp.type.decorator"] = { link = "@attribute" },
+    -- ["@lsp.type.deriveHelper"] = { link = "@attribute" },
+    -- ["@lsp.type.enum"] = { link = "@type" },
+    -- ["@lsp.type.enumMember"] = { link = "@constant" },
+    -- ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
+    -- ["@lsp.type.formatSpecifier"] = { link = "@markup.list" },
+    -- ["@lsp.type.generic"] = { link = "@variable" },
+    -- ["@lsp.type.interface"] = { fg = util.lighten(c.blue1, 0.7) },
+    -- ["@lsp.type.keyword"] = { link = "@keyword" },
+    -- ["@lsp.type.lifetime"] = { link = "@keyword.storage" },
+    -- ["@lsp.type.namespace"] = { link = "@module" },
+    -- ["@lsp.type.number"] = { link = "@number" },
+    -- ["@lsp.type.operator"] = { link = "@operator" },
+    -- ["@lsp.type.parameter"] = { link = "@variable.parameter" },
+    -- ["@lsp.type.property"] = { link = "@property" },
+    -- ["@lsp.type.selfKeyword"] = { link = "@variable.builtin" },
+    -- ["@lsp.type.selfTypeKeyword"] = { link = "@variable.builtin" },
+    -- ["@lsp.type.string"] = { link = "@string" },
+    -- ["@lsp.type.typeAlias"] = { link = "@type.definition" },
+    -- ["@lsp.type.unresolvedReference"] = { undercurl = true, sp = c.error },
+    -- ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
+    -- ["@lsp.typemod.class.defaultLibrary"] = { link = "@type.builtin" },
+    -- ["@lsp.typemod.enum.defaultLibrary"] = { link = "@type.builtin" },
+    -- ["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
+    -- ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
+    -- ["@lsp.typemod.keyword.async"] = { link = "@keyword.coroutine" },
+    -- ["@lsp.typemod.keyword.injected"] = { link = "@keyword" },
+    -- ["@lsp.typemod.macro.defaultLibrary"] = { link = "@function.builtin" },
+    -- ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
+    -- ["@lsp.typemod.operator.injected"] = { link = "@operator" },
+    -- ["@lsp.typemod.string.injected"] = { link = "@string" },
+    -- ["@lsp.typemod.struct.defaultLibrary"] = { link = "@type.builtin" },
+    -- ["@lsp.typemod.type.defaultLibrary"] = { fg = util.darken(c.blue1, 0.8) },
+    -- ["@lsp.typemod.typeAlias.defaultLibrary"] = { fg = util.darken(c.blue1, 0.8) },
+    -- ["@lsp.typemod.variable.callable"] = { link = "@function" },
+    -- ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
+    -- ["@lsp.typemod.variable.injected"] = { link = "@variable" },
+    -- ["@lsp.typemod.variable.static"] = { link = "@constant" },
+    -- -- NOTE: maybe add these with distinct highlights?
+    -- -- ["@lsp.typemod.variable.globalScope"] (global variables)
+
+  -- END TODO ----------------------------------------------------------------------------------------
+
   }
 
   treesitter.TSComment=          { fg = co.bg_2 }
