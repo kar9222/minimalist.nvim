@@ -17,4 +17,8 @@ For gallery, see [kar9222/nvim](https://github.com/kar9222/nvim)
 
 # Internal notes 
 
+Code structure is based on [shaunsingh/nord.nvim](https://github.com/shaunsingh/nord.nvim)
+
 - [ ] Refactor, cleanup and pay off technical debts
+- [ ] Optimize Windows Terminal colors? See folder ./extras/windows_terminal of [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+- [ ] LSP symbol kind: See folder ./lua/tokyonight/theme of [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
