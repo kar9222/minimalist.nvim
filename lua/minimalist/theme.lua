@@ -643,9 +643,9 @@ theme.loadPlugins = function()
     -- toggleterm
     ToggleTermBorder = { fg = co.dark_bg_1 },
 
-    -- symbols-outline
-    FocusedSymbol = { fg = co.standout, style = 'bold' },
-    SymbolsOutlineConnector = { fg = co.red },  -- TODO
+    -- aeriel
+    AerialLine   = { bg = co.git_add, fg = co.standout, style = 'bold' },  -- Line in outline and line in buffer
+    AerialLineNC = { bg = '#ff0000' },
 
     -- lightspeed
 
