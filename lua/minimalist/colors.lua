@@ -64,11 +64,11 @@ local minimalist = {
   git_add_emph      = "#425E75",
   git_delete        = "#342B35",
   git_delete_emph   = "#5A4B5C",
-  git_change        = "#394855",
-  git_change_emph   = "#2e6676",
-  git_gutter_change = '#383c47',
-  git_gutter_add    = '#383c47',
-  git_gutter_delete = '#1d222a',
+  git_change        = "#403C2A",
+  git_change_emph   = "#6B6447",
+  git_gutter_add    = '#51677A',
+  git_gutter_delete = '#524454',
+  git_gutter_change = '#5B563D',
 
   none = 'NONE',
 
