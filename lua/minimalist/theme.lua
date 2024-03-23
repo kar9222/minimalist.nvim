@@ -644,8 +644,8 @@ theme.loadPlugins = function()
     ToggleTermBorder = { fg = co.dark_bg_1 },
 
     -- aeriel
-    AerialLine   = { bg = co.git_add, fg = co.standout, style = 'bold' },  -- Line in outline and line in buffer
-    AerialLineNC = { bg = co.git_add, fg = co.standout, style = 'bold' },
+    AerialLine   = { bg = co.cursorline_bg, fg = co.standout, style = 'bold' },  -- Line in outline and line in buffer
+    AerialLineNC = { bg = co.cursorline_bg, fg = co.standout, style = 'bold' },
     AerialEvent = { fg = co.standout_more },  -- NOTE `Event` is my custom branch of {languageserver}
     AerialInterfaceIcon = { fg = co.dark_bg_1 },  -- Markdown's heading icon. Changed to `│`
 
