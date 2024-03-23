@@ -253,7 +253,7 @@ theme.loadEditor = function ()
     WildMenu =         { fg = co.diff_mode_added_line, bg = co.none, style = 'bold' },
     CursorColumn =     { fg = co.none, bg = co.cursorlinefg },
     CursorLineNr =     { fg = co.dark_bg_1, bg = co.slightly_darker_bg },  -- 'Disable' fg by setting it to the same as LineNr
-    CursorLine =       { fg = co.standout, bg = co.slightly_darker_bg },
+    CursorLine =       { bg = co.cursorline_bg },
     ToolbarLine =      { fg = co.fg, bg = co.dark_bg_2 },
     ToolbarButton =    { fg = co.fg, bg = co.none, style = 'bold' },
     NormalMode =       { fg = co.fg, bg = co.none, style = 'reverse' },
