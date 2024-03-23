@@ -646,6 +646,8 @@ theme.loadPlugins = function()
     -- aeriel
     AerialLine   = { bg = co.git_add, fg = co.standout, style = 'bold' },  -- Line in outline and line in buffer
     AerialLineNC = { bg = '#ff0000' },
+    AerialEvent = { fg = co.standout_more },  -- NOTE `Event` is my custom branch of {languageserver}
+    AerialInterfaceIcon = { fg = co.dark_bg_1 },  -- Markdown's heading icon. Changed to `│`
 
     -- lightspeed
 
