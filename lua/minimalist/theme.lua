@@ -157,8 +157,8 @@ theme.loadSyntax = function ()
     -- mkdUrl = { fg = co.bg_1, style = 'italic' },
 
     -- JSON
-    jsonKeyword     = { fg = co.fg },
-    jsonString      = { fg = co.standout },
+    jsonKeyword     = { fg = co.standout, style = 'bold' },
+    jsonString      = { fg = co.standout_more },
     jsonQuote       = { fg = co.bg_1 },
     jsonCommentTodo = { fg = co.bg_1, bg = co.none, style = 'bold,italic' },
 
