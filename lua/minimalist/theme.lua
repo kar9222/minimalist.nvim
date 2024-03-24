@@ -736,9 +736,9 @@ theme.loadPlugins = function()
 
     -- Telescope
 
-    TelescopeNormal         = { fg = co.fg, bg = co.bg },
-    TelescopeSelection      = { fg = co.standout },
-    TelescopeMatching       = { fg = co.standout_more },
+    TelescopeNormal         = { fg = co.fg },
+    TelescopeSelection      = { bg = co.selection_bg },
+    TelescopeMatching       = { fg = co.standout },
     TelescopePromptPrefix   = { fg = co.dark_bg_1 },
     TelescopeSelectionCaret = { fg = co.bright_bg_1_2 },
     TelescopeBorder         = { fg = co.dark_bg_1 },

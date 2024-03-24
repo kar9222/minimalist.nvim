@@ -5,6 +5,7 @@ local minimalist = {
   fg = "#f8f8f2",
 
   cursorline_bg = '#2C3843',
+  selection_bg = '#33404C',  -- 25
 
   dark_bg_1 = "#435554",  -- Border, line number, etc. col_5_2
   dark_bg_2 = "#434c5d",  -- (variant)
