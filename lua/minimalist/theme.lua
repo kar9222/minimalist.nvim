@@ -988,14 +988,14 @@ theme.loadPlugins = function()
     -- NotifyDEBUGTitle       = {  },
     -- NotifyTRACETitle       = {  },
 
-    -- NotifyERRORBody Normal = {  },
-    -- NotifyWARNBody Normal  = {  },
-    -- NotifyINFOBody Normal  = {  },
-    -- NotifyDEBUGBody Normal = {  },
-    -- NotifyTRACEBody Normal = {  },
+    NotifyERRORBody = { fg = co.standout_special_0 },
+    NotifyWARNBody  = { fg = co.standout_special_0 },
+    NotifyINFOBody  = { fg = co.standout_special_0 },
+    NotifyDEBUGBody = { fg = co.standout_special_0 },
+    NotifyTRACEBody = { fg = co.standout_special_0 },
 
-    -- NotifyLogTime Comment  = {  },
-    -- NotifyLogTitle Special = {  },
+    -- NotifyLogTime  = {  },
+    -- NotifyLogTitle = {  },
 
   }
   -- Options:
