@@ -957,7 +957,7 @@ theme.loadPlugins = function()
     -- NoiceLspProgressClient             = {  },
     -- NoiceLspProgressSpinner            = {  },
     -- NoiceLspProgressTitle              = {  },
-    -- NoiceMini                          = {  },
+    NoiceMini                          = { fg = co.standout_special_0 },
     -- NoicePopup                         = {  },
     -- NoicePopupBorder                   = {  },
     -- NoicePopupmenu                     = {  },
