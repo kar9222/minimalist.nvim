@@ -39,6 +39,8 @@ local minimalist = {
   folder_icon = '#8AA398',
   indent_marker = '#384640',  -- folder_icon L - 35
 
+  outline_event = '#E8E2AF',
+
   lsp_diag_error    = '#ff6464',
   lsp_diag_warn     = '#fa973a',
   lsp_diag_info     = '#00b7e4',

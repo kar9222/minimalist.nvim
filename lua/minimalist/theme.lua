@@ -646,7 +646,8 @@ theme.loadPlugins = function()
     -- aeriel
     AerialLine          = { bg = co.cursorline_bg, fg = co.standout, style = 'bold' },  -- Line in outline and line in buffer
     AerialLineNC        = { bg = co.cursorline_bg, fg = co.standout, style = 'bold' },
-    AerialEvent         = { fg = co.standout_special_0, style = 'bold' },  -- NOTE `Event` is my custom branch of {languageserver}
+    AerialEvent         = { fg = co.outline_event },  -- NOTE `Event` is my custom branch of {languageserver}
+
     AerialInterfaceIcon = { fg = co.dark_bg_1 },  -- Markdown's heading icon. Changed to `│`
     AerialFunction      = { fg = co.standout_less },
     AerialFunctionIcon  = { fg = co.standout_less },
