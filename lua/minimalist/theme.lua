@@ -783,9 +783,9 @@ theme.loadPlugins = function()
     LspDiagnosticsHint =        { fg = co.bright_bg_1_2 },
 
     -- WhichKey
-    WhichKey =          { fg = co.fg , style = 'bold'},
-    WhichKeyGroup =     { fg = co.fg },
-    WhichKeyDesc =      { fg = co.bright_bg_1, style = 'italic' },
+    WhichKey =          { fg = co.standout_more , style = 'bold'},
+    WhichKeyGroup =     { fg = co.standout },
+    WhichKeyDesc =      { fg = co.bright_bg_1 },
     WhichKeySeperator = { fg = co.fg },
     WhichKeyFloating =  { bg = co.bg },
     WhichKeyFloat =     { bg = co.bg },
