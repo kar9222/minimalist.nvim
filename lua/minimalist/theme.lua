@@ -1000,6 +1000,11 @@ theme.loadPlugins = function()
     -- NotifyLogTime  = {  },
     -- NotifyLogTitle = {  },
 
+    -- indent-blankline
+    IblIndent     = { fg = co.dark_bg_1 },
+    IblWhitespace = { fg = co.dark_bg_1 },
+    -- IblScope  = {  },
+
   }
   -- Options:
 
