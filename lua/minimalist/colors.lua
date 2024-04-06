@@ -8,7 +8,7 @@ local minimalist = {
   selection_bg = '#33404C',  -- 25
 
   dark_bg_1 = "#435554",  -- Border, line number, etc. col_5_2
-  dark_bg_2 = "#434c5d",  -- (variant)
+  dark_bg_2 = "#354946",  -- (variant)
 
   bg_1 = "#6E858D",  -- Bracket, operator dollar sign, etc. col_6
   bg_2 = "#8b9fa3",  -- Comment, etc. col_5
