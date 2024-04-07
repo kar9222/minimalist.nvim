@@ -764,6 +764,7 @@ theme.loadPlugins = function()
     HarpoonBorder = { fg = co.dark_bg_1 },
 
     -- NvimTree
+    NvimTreeCursorLine        = { bg = co.cursorline_bg, fg = co.standout },
     NvimTreeRootFolder =        { fg = co.standout_special_1 },
     NvimTreeGitDirty =          { fg = co.standout_more },
     NvimTreeGitNew =            { fg = co.standout_more },
