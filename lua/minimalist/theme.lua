@@ -634,7 +634,7 @@ theme.loadPlugins = function()
 
     -- Spectre
     SpectreFileDirectory = { fg = co.bg_2 },
-    SpectreFileName = { fg = co.bright_bg_1_2, style = 'bold,underline' },
+    SpectreFileName = { fg = co.standout, style = 'bold' },
     SpectreUI      = { fg = co.bg_3, style = 'italic' },
     SpectreSearch  = { fg = co.standout_more },
     SpectreReplace = { bg = co.SpectreReplace_bg },
