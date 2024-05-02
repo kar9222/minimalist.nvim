@@ -116,6 +116,13 @@ theme.loadSyntax = function ()
     luaTable      = { fg = co.bg_1 },
     luaKeywordEnd = { fg = co.bg_1 },
 
+    -- zotcite
+    zoteroKey         = { fg = co.bg_2 },
+    -- zoteroHidden      = { },
+    -- zoteroCiteKey     = { },
+    -- zoteroRefLabel    = { },
+    -- zoteroRefAnchor   = { },
+    -- zoteroCiteLocator = { },
 
     -- Pandoc
     pandocAtxStart  = { fg = co.standout, style = "bold" },
