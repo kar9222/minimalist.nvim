@@ -116,13 +116,19 @@ theme.loadSyntax = function ()
     luaTable      = { fg = co.bg_1 },
     luaKeywordEnd = { fg = co.bg_1 },
 
-    -- zotcite
-    zoteroKey         = { fg = co.bg_2 },
-    -- zoteroHidden      = { },
-    -- zoteroCiteKey     = { },
-    -- zoteroRefLabel    = { },
-    -- zoteroRefAnchor   = { },
-    -- zoteroCiteLocator = { },
+    -- bib
+    bibKey               = { fg = co.standout, style = 'bold' },
+    bibVariable          = { fg = co.standout_special_0 },
+    bibEntryKw           = { fg = co.standout_special_0 },
+    bibBrace             = { fg = co.standout_less },  -- Brace and its content
+    bibField             = { fg = co.bg_1 },  -- "Equal" sign
+    bibEntryData         = { fg = co.bg_1 },  -- Comma
+    -- bibType              = { fg = co. },
+    -- bibNSEntryKw         = { fg = co. },
+    -- bibUnescaptedSpecial = { fg = co. },
+    -- bibComment           = { fg = co. },
+    -- bibComment2          = { fg = co. },
+    -- bibComment3          = { fg = co. },
 
     -- Pandoc
     pandocAtxStart  = { fg = co.standout, style = "bold" },
