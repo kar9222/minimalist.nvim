@@ -656,7 +656,7 @@ theme.loadPlugins = function()
     -- toggleterm
     ToggleTermBorder = { fg = co.dark_bg_1 },
 
-    -- aeriel
+    -- aerial
     AerialLine          = { bg = co.cursorline_bg, fg = co.standout, style = 'bold' },  -- Line in outline and line in buffer
     AerialLineNC        = { bg = co.cursorline_bg, fg = co.standout, style = 'bold' },
     AerialEvent         = { fg = co.outline_event },  -- NOTE `Event` is my custom branch of {languageserver}
