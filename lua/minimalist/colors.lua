@@ -36,6 +36,10 @@ local minimalist = {
   standout_special_2_3 = "#1f454f", -- vim.highlight
   standout_special_3 = "#C7C7BF",   -- Keyword, etc
 
+  -- Markup
+  link_url = '#DED3B4',
+  strong = '#EADAAD',
+
   fold_bg = '#31343C',
   error_bg = '#6b5a6d',
 

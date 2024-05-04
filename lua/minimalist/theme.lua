@@ -183,6 +183,17 @@ theme.loadSyntax = function ()
     xmlTag     = { fg = co.dark_bg_1 },
     xmlTagName = { fg = co.bg_1 },
 
+    -- Obsidian
+    ObsidianBullet        = { fg = co.bg_2 },
+    ObsidianRefText       = { fg = co.link_url, underline = true },
+    ObsidianExtLinkIcon   = { fg = co.folder_icon, },
+    ObsidianHighlightText = { bg = '#75662e' },
+    ObsidianTodo          = { fg = '#f78c6c', bold = true },
+    ObsidianDone          = { fg = '#89ddff', bold = true },
+    ObsidianRightArrow    = { fg = '#f78c6c', bold = true },
+    ObsidianTilde         = { fg = '#ff5370', bold = true },
+    ObsidianTag           = { fg = '#89ddff', italic = true },
+
   }
 
   	-- Italic comments
@@ -431,9 +442,9 @@ theme.loadTreeSitter = function ()
     -- ["@keyword.repeat"] = { link = "Repeat" },
     -- ["@keyword.storage"] = { link = "StorageClass" },
     -- ["@string"] = { link = "String" },
-    ["@markup.link.label"] = { fg = "#c792ea", style = 'underline' },
-    ["@markup.link.label.symbol"] = { fg = "#c792ea" },
-    ["@markup.link.url"] = { fg = "#c792ea" },
+    ["@markup.link.label"] = { fg = co.link_url, style = 'underline' },
+    ["@markup.link.label.symbol"] = { fg = co.link_url },
+    ["@markup.link.url"] = { fg = co.fg },
     -- ["@tag"] = { link = "Label" },
     -- ["@tag.attribute"] = { link = "@property" },
     -- ["@tag.delimiter"] = { link = "Delimiter" },
@@ -442,7 +453,7 @@ theme.loadTreeSitter = function ()
     ["@markup.environment.name"] = { link = "Type" },
     ["@markup.raw"] = { link = 'String' },
     ["@markup.math"] = { link = "Special" },
-    ["@markup.strong"] = { fg = co.standout_more, style = 'bold' },
+    ["@markup.strong"] = { fg = co.strong, style = 'bold' },
     ["@markup.emphasis"] = { fg = co.standout_more, style = 'italic' },
     ["@markup.strikethrough"] = { strikethrough = true },
     ["@markup.underline"] = { underline = true },
@@ -467,7 +478,7 @@ theme.loadTreeSitter = function ()
     -- ["@punctuation.bracket"] = { fg = c.fg_dark }, -- For brackets and parens.
     -- ["@punctuation.special"] = { fg = c.blue5 }, -- For special symbols (e.g. `{}` in string interpolation)
     -- ["@markup.list"] = { fg = c.blue5 }, -- For special punctutation that does not fall in the catagories before.
-    ["@markup.list.markdown"] = { fg = '#c792ea', bold = true },  -- Ordered list
+    ["@markup.list.markdown"] = { fg = co.bg_2, bold = true },  -- Ordered list
 
     -- --- Literals
     -- ["@string.documentation"] = { fg = c.yellow },
