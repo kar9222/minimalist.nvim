@@ -449,6 +449,8 @@ theme.loadTreeSitter = function ()
     -- ["@tag.attribute"] = { link = "@property" },
     -- ["@tag.delimiter"] = { link = "Delimiter" },
     ["@markup"] = { link = "@none" },
+    ["@markup.raw.block"] = { bg = co.code_block },  -- Codeblock
+    ["@markup.raw.markdown_inline"] = { fg = co.standout_more, bg = co.code_block },  -- Inline codeblock
     ["@markup.environment"] = { link = "Macro" },
     ["@markup.environment.name"] = { link = "Type" },
     ["@markup.raw"] = { link = 'String' },

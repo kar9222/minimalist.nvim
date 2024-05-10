@@ -39,6 +39,7 @@ local minimalist = {
   -- Markup
   link_url = '#DED3B4',
   strong = '#EADAAD',
+  code_block = '#30353F',
 
   fold_bg = '#31343C',
   error_bg = '#6b5a6d',
