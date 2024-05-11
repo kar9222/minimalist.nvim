@@ -51,7 +51,7 @@ theme.loadSyntax = function ()
     rFunctionName        = { fg = co.standout },
     rKeywordFunction     = { fg = co.bright_bg_1_2, style = 'bold' },
     rCommentKey          = { fg = co.dark_bg_1 },
-    rCodeSection         = { fg = co.standout_special_0, style = 'bold' },
+    rCodeSection         = { fg = co.standout, style = 'bold' },
     rCodeSectionEndDelim = { fg = co.bg_2 },
     rNotOperator         = { fg = co.standout_more },  -- Override `!` operator from default `rOperator` highlight group
 
@@ -67,7 +67,7 @@ theme.loadSyntax = function ()
     juliaSymbol              = { fg = co.fg },
     juliaCommentDelim        = { fg = co.dark_bg_1 },
     juliaCommentKey          = { fg = co.dark_bg_1 },
-    juliaCodeSection         = { fg = co.standout_special_0, style = 'bold' },
+    juliaCodeSection         = { fg = co.standout, style = 'bold' },
     juliaCodeSectionEndDelim = { fg = co.bg_2 },
 
     -- Literal `function`, `macro`, `struct`, etc
