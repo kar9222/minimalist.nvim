@@ -314,9 +314,11 @@ theme.loadEditor = function ()
 
   -- Remove window split borders
   if vim.g.minimalist_borders then
-    editor.VertSplit = { fg = co.dark_bg_1 }
+    editor.WinSeparator = { fg = co.dark_bg_1 }
+    editor.VertSplit    = { fg = co.dark_bg_1 }
   else
-    editor.VertSplit = { fg = co.bg }
+    editor.WinSeparator = { fg = co.bg }
+    editor.VertSplit    = { fg = co.bg }
   end
 
   return editor
