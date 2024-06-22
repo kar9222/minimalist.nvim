@@ -1,5 +1,5 @@
 local minimalist = {
-  bg = "#282C35",
+  bg = "#000000",
   slightly_lighter_bg = '#2C3843',  -- Status bar, etc
   slightly_darker_bg = "#22262F",   -- Git contextual highlight, etc
   fg = "#f8f8f2",
