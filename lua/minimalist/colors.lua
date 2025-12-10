@@ -22,7 +22,7 @@ local minimalist = {
   standout_less = "#DCE8E9",  -- Func, etc
   bright_standout_less = "#ECEFF4",
 
-  standout      = "#C496F2",  -- Keyword, etc
+  standout      = "#CC99FF",  -- Keyword, etc
   standout_more = "#E6DB74",  -- String, number, boolean, etc
 
   standout_special_0 = "#F6CE63",   -- Markdown title, section title, etc
