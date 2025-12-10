@@ -1,11 +1,11 @@
 local minimalist = {
   bg = "#282C35",
-  slightly_lighter_bg = '#373836',  -- Status bar, etc
+  slightly_lighter_bg = '#2C3843',  -- Status bar, etc
   slightly_darker_bg = "#22262F",   -- Git contextual highlight, etc
   fg = "#f8f8f2",
 
-  cursorline_bg = '#373836',
-  selection_bg = '#474846',  -- 25
+  cursorline_bg = '#2C3843',
+  selection_bg = '#33404C',  -- 25
 
   dark_bg_1 = "#435554",  -- Border, line number, etc. col_5_2
   dark_bg_2 = "#354946",  -- (variant)
@@ -22,10 +22,10 @@ local minimalist = {
   standout_less = "#DCE8E9",  -- Func, etc
   bright_standout_less = "#ECEFF4",
 
-  standout      = "#ea6962",  -- Keyword, etc
+  standout      = "#FF8E8E",  -- Keyword, etc
   standout_more = "#E6DB74",  -- String, number, boolean, etc
 
-  standout_special_0 = "#F6CE63",   -- Markdown title, section title, etc
+  standout_special_0 = "#dad49c",   -- Markdown title, section title, etc
   -- standout_special_0 = "#8ABDC1",   -- Markdown title, section title, etc
   -- standout_special_0 = "#CDE1B9",   -- Markdown title, section title, etc
   -- standout_special_0 = "#BED2AA",   -- Markdown title, section title, etc
