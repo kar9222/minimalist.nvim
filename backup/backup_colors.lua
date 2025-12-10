@@ -1,11 +1,11 @@
 local minimalist = {
-  bg = "#2D2D2D",
-  slightly_lighter_bg = '#27393E',  -- Status bar, etc  (backup 253645, 2C3843)
+  bg = "#282C35",
+  slightly_lighter_bg = '#2C3843',  -- Status bar, etc
   slightly_darker_bg = "#22262F",   -- Git contextual highlight, etc
   fg = "#f8f8f2",
 
-  cursorline_bg = '#27393E', -- (backup 253645, 2C3843)
-  selection_bg = '#354D53',  -- 25
+  cursorline_bg = '#2C3843',
+  selection_bg = '#33404C',  -- 25
 
   dark_bg_1 = "#435554",  -- Border, line number, etc. col_5_2
   dark_bg_2 = "#354946",  -- (variant)
@@ -22,10 +22,10 @@ local minimalist = {
   standout_less = "#DCE8E9",  -- Func, etc
   bright_standout_less = "#ECEFF4",
 
-  standout      = "#CC99FF",  -- Keyword, etc  (backup color: #FF757E)
-  standout_more = "#EEDB5C",  -- String, number, boolean, etc
+  standout      = "#FF8E8E",  -- Keyword, etc
+  standout_more = "#E6DB74",  -- String, number, boolean, etc
 
-  standout_special_0 = "#F6CE63",   -- Markdown title, section title, etc
+  standout_special_0 = "#dad49c",   -- Markdown title, section title, etc
   -- standout_special_0 = "#8ABDC1",   -- Markdown title, section title, etc
   -- standout_special_0 = "#CDE1B9",   -- Markdown title, section title, etc
   -- standout_special_0 = "#BED2AA",   -- Markdown title, section title, etc
@@ -62,7 +62,7 @@ local minimalist = {
   lightspeed_label_overlapped = '#e01067',
   lightspeed_shortcut = '#99ddff',
   lightspeed_masked_char = '#b38080',
-  lightspeed_label_distance = '#EEDB5C',
+  lightspeed_label_distance = '#E6DB74',
   lightspeed_label_distance_overlapped = '#afa86a',
   SpectreReplace_bg = '#02387e',
 
@@ -70,7 +70,7 @@ local minimalist = {
   diff_mode_added_line = "#342B35",  -- TODO
 
   cursor_fg = "#b3c5d3",
-  cursor_bg = "#2D2D2D",
+  cursor_bg = "#282C35",
 
   -- Git
   git_add           = "#2C3843",
