@@ -752,7 +752,8 @@ theme.loadPlugins = function()
     GitSignsAddLn =    { bg = co.git_add }, -- diff mode: Added line |diff.txt|
     GitSignsDelete =   { fg = co.git_gutter_delete }, -- diff mode: Deleted line |diff.txt|
     GitSignsDeleteNr = { fg = co.bg_1, bg = co.git_delete }, -- diff mode: Deleted line |diff.txt|
-    GitSignsDeleteLn = { bg = co.git_delete }, -- diff mode: Deleted line |diff.txt|
+    GitSignsDeleteLn = { bg = co.none }, -- NOTE This is important as a hacky way to "not highlight" deleted line for toggle_linehl. Because I use a combination of toggling line highlight + word diff + deleted lines + number highlight. Refer to gitsigns config for details. diff mode: Deleted line |diff.txt|
+
     -- Word diff in previews
     GitSignsAddInline          = { bg = co.git_add_emph },
     GitSignsChangeInline       = { bg = co.git_change_emph },
