@@ -829,6 +829,7 @@ theme.loadPlugins = function()
     CmpItemAbbrMatchFuzzy    = { fg = co.standout_more },
     CmpItemAbbrDeprecated    = { fg = co.bg_2 },
     CmpItemKindField         = { fg = co.standout_special_0 },
+    CmpItemKind              = { fg = co.standout_special_0 },  -- For nvim.cmp's AI icon
     -- CmpItemKindProperty      = { fg =  },
     -- CmpItemKindEvent         = { fg =  },
     CmpItemKindText          = { fg = co.dark_bg_1 },
