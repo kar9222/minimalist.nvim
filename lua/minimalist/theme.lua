@@ -795,7 +795,7 @@ theme.loadPlugins = function()
 
     -- NvimTree
     NvimTreeCursorLine        = { bg = co.cursorline_bg, fg = co.standout },
-    NvimTreeRootFolder =        { fg = co.standout_special_1 },
+    NvimTreeRootFolder =        { fg = co.standout_more },
     NvimTreeGitDirty =          { fg = co.standout_more },
     NvimTreeGitNew =            { fg = co.standout_more },
     NvimTreeImageFile =         { fg = co.standout_more },
