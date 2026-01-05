@@ -38,7 +38,7 @@ local minimalist = {
 
   -- Markup
   link_url = '#DED3B4',
-  strong = '#EADAAD',
+  strong = '#D9C868',  -- If too bright/dark, decrease/increase `s` of `HSL`. Previously #EADAAD
   code_block = '#30353F',
 
   fold_bg = '#31343C',
