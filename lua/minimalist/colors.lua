@@ -73,10 +73,10 @@ local minimalist = {
   cursor_bg = "#2D2D2D",
 
   -- Git
-  git_add           = "#2C3843",
-  git_add_emph      = "#425E75",
-  git_delete        = "#342B35",
-  git_delete_emph   = "#5A4B5C",
+  git_add           = "#2C3B40",
+  git_add_emph      = "#3A5E5C",
+  git_delete        = "#372B32",
+  git_delete_emph   = "#5A4349",
   git_change        = "#403C2A",
   git_change_emph   = "#6B6447",
   git_gutter_add    = '#51677A',
