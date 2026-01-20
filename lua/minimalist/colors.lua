@@ -44,7 +44,7 @@ local minimalist = {
   fold_bg = '#31343C',
   error_bg = '#6b5a6d',
 
-  folder_icon = '#8AA398',
+  folder_icon = '#8E8AA1',    -- Prev #8AA398
   indent_marker = '#384640',  -- folder_icon L - 35
 
   outline_event = '#EEDB5C',
