@@ -19,7 +19,7 @@ local minimalist = {
 
   dark_standout_less = "#B3CACE",  -- lazygit commit messge/active border, etc. TODO Previously #b3c5d3 okay for VSCode
   dark_standout_less_2 = "#CCD9DD",  -- `str`, lazygit commit hash, etc
-  standout_less = "#DCE8E9",  -- Func, etc
+  standout_less = "#BDD8EE",  -- Func, etc. Prev #DCE8E9
   bright_standout_less = "#ECEFF4",
 
   standout      = "#CC99FF",  -- Keyword, etc  (backup color: #FF757E)
