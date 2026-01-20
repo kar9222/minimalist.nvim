@@ -15,7 +15,7 @@ local minimalist = {
   bg_3 = "#82a2ad",  -- Status bar fg
 
   bright_bg_1 = "#BECBCD",  -- TODO
-  bright_bg_1_2 = "#BECECA",
+  bright_bg_1_2 = "#A1C8E6",  -- Prev #BECECA
 
   dark_standout_less = "#B3CACE",  -- lazygit commit messge/active border, etc. TODO Previously #b3c5d3 okay for VSCode
   dark_standout_less_2 = "#CCD9DD",  -- `str`, lazygit commit hash, etc
