@@ -445,7 +445,7 @@ theme.loadTreeSitter = function ()
     -- ["@keyword.repeat"] = { link = "Repeat" },
     -- ["@keyword.storage"] = { link = "StorageClass" },
     -- ["@string"] = { link = "String" },
-    ["@markup.link.label"] = { fg = co.link_url, style = 'underline' },
+    ["@markup.link.label"] = { fg = co.link_url, },  -- Prev `style = 'underline'`
     ["@markup.link.label.symbol"] = { fg = co.link_url },
     ["@markup.link.url"] = { fg = co.fg },
     -- ["@tag"] = { link = "Label" },

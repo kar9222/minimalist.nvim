@@ -37,7 +37,7 @@ local minimalist = {
   standout_special_3 = "#C7C7BF",   -- Keyword, etc
 
   -- Markup
-  link_url = '#DED3B4',
+  link_url = '#BDDAF3',
   strong = '#D9C868',  -- If too bright/dark, decrease/increase `s` of `HSL`. Previously #EADAAD
   code_block = '#30353F',
 
