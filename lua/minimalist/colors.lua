@@ -15,11 +15,11 @@ local minimalist = {
   bg_3 = "#82a2ad",  -- Status bar fg
 
   bright_bg_1 = "#BECBCD",  -- TODO
-  bright_bg_1_2 = "#A1C8E6",  -- Prev #BECECA
+  bright_bg_1_2 = "#ABC4D8",  -- Prev #BECECA
 
   dark_standout_less = "#B3CACE",  -- lazygit commit messge/active border, etc. TODO Previously #b3c5d3 okay for VSCode
   dark_standout_less_2 = "#CCD9DD",  -- `str`, lazygit commit hash, etc
-  standout_less = "#BDD8EE",  -- Func, etc. Prev #DCE8E9
+  standout_less = "#C2D5E4",  -- Func, etc. Prev #DCE8E9
   bright_standout_less = "#ECEFF4",
 
   standout      = "#CC99FF",  -- Keyword, etc  (backup color: #FF757E)
@@ -37,7 +37,7 @@ local minimalist = {
   standout_special_3 = "#C7C7BF",   -- Keyword, etc
 
   -- Markup
-  link_url = '#BDDAF3',
+  link_url = '#C1D8EA',
   strong = '#D9C868',  -- If too bright/dark, decrease/increase `s` of `HSL`. Previously #EADAAD
   code_block = '#30353F',
 
