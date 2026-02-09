@@ -4,7 +4,7 @@ local minimalist = {
   slightly_darker_bg = "#22262F",   -- Git contextual highlight, etc
   fg = "#f8f8f2",
 
-  cursorline_bg = '#27393E', -- (backup 253645, 2C3843)
+  cursorline_bg = '#354946',
   selection_bg = '#354D53',  -- 25
 
   dark_bg_1 = "#435554",  -- Border, line number, etc. col_5_2
