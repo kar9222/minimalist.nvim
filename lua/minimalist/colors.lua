@@ -39,7 +39,7 @@ local minimalist = {
   -- Markup
   link_url = '#C1D8EA',
   strong = '#D9C868',  -- If too bright/dark, decrease/increase `s` of `HSL`. Previously #EADAAD
-  code_block = '#30353F',
+  code_block = '#2D2D2D',  -- Prev 30353F
 
   fold_bg = '#31343C',
   error_bg = '#6b5a6d',
